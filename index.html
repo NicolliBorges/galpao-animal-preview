@@ -56,22 +56,30 @@ h1,h2,h3{font-family:"Lilita One","Nunito Sans",sans-serif;font-weight:400;line-
 .nav a{padding:6px 0;border-bottom:2px solid transparent}
 .nav a:hover{color:var(--moss);border-color:var(--olive)}
 
-/* hero */
-.hero{padding:52px 0 76px}
-.hero-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(46px,5.6vw,78px);color:var(--moss);margin-bottom:20px}
-.hero .lead{font-size:clamp(17px,1.4vw,19.5px);color:var(--muted);max-width:33em;margin:0 0 28px}
-.hero .lead strong{color:var(--ink)}
+/* hero (foto de fundo) */
+.hero-b{position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;background:var(--moss-dd);min-height:clamp(560px,48vw,calc(100svh - 124px))}
+.hero-media{position:absolute;inset:-3% 0 -3% 0;will-change:transform}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:0% 42%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,25,11,.9) 0%,rgba(18,25,11,.72) 34%,rgba(18,25,11,.18) 62%,rgba(18,25,11,0) 78%),linear-gradient(0deg,rgba(18,25,11,.55) 0%,rgba(18,25,11,0) 38%)}
+.hero-content{position:relative;z-index:2;padding:64px 0 72px}
+.hero-kicker{display:block;font-weight:800;font-size:14.5px;letter-spacing:.03em;color:var(--olive);margin-bottom:16px}
+.hero-b h1{font-size:clamp(54px,6vw,88px);color:#fff;max-width:7.5em;margin-bottom:20px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.hero-b .lead{font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.88);max-width:31em;margin:0 0 30px}
+.hero-b .lead strong{color:#fff}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
-.rating{display:flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:var(--muted)}
+.rating{display:flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:rgba(255,255,255,.8)}
 .rating .stars{color:var(--star);letter-spacing:1px;font-size:16px}
-.rating b{color:var(--ink)}
-.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.mosaic figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:var(--paper2)}
-.mosaic img{width:100%;height:100%;object-fit:cover}
-.m-main{grid-column:span 2;aspect-ratio:2.05}
-.m-a,.m-b{aspect-ratio:4/3}
-.mosaic figcaption{position:absolute;left:12px;bottom:12px;background:rgba(250,247,239,.94);color:var(--ink);font-size:13px;font-weight:800;padding:5px 10px;border-radius:6px}
+.rating b{color:#fff}
+
+/* faixa de fotos */
+.strip{background:var(--paper);padding:20px 0;overflow:hidden}
+.strip-track{display:flex;width:max-content;animation:strip 70s linear infinite}
+.strip:hover .strip-track{animation-play-state:paused}
+.strip-group{display:flex;gap:14px;padding-right:14px}
+.strip figure{position:relative;margin:0;width:210px;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:var(--paper2);flex:none}
+.strip img{width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(250,247,239,.94);color:var(--ink);font-size:12.5px;font-weight:800;padding:4px 9px;border-radius:6px}
+@keyframes strip{to{transform:translateX(-50%)}}
 
 /* aquarium */
 .dark{color:#e9efe6}
@@ -102,28 +110,43 @@ h1,h2,h3{font-family:"Lilita One","Nunito Sans",sans-serif;font-weight:400;line-
 #aquarium .bubble{transform-box:fill-box;animation:rise 4.2s linear infinite;opacity:0}
 @keyframes rise{0%{transform:translateY(0);opacity:0}12%{opacity:.9}100%{transform:translateY(-270px);opacity:0}}
 
-/* setores */
+/* setores (carrossel) */
 .section{padding:clamp(72px,9vw,112px) 0}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 48px;flex-wrap:wrap;margin-bottom:40px}
 .sec-head h2{font-size:clamp(34px,4vw,54px);color:var(--moss);max-width:15em}
 .sec-head p{max-width:27em;color:var(--muted);margin:0}
-.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.card{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .25s}
-.card.wide{grid-column:span 3}
-.card:hover{border-color:#cfc6ae;box-shadow:0 14px 30px -18px rgba(31,38,24,.35)}
-.card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--paper2)}
-.card.wide .ph{aspect-ratio:16/8}
-.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.card:hover .ph img{transform:scale(1.04)}
-.card .ph.contain{position:relative}
-.card .ph.contain img{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);object-fit:contain}
-.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
-.card h3{font-size:27px;color:var(--ink)}
-.card p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.55}
-.card .go{margin-top:auto;padding-top:12px;font-weight:800;font-size:15px;color:var(--moss);display:inline-flex;align-items:center;gap:6px}
-.card .go svg{width:16px;height:16px;transition:transform .2s}
-.card:hover .go svg{transform:translateX(3px)}
-.tag{display:inline-block;align-self:flex-start;font-size:12.5px;font-weight:800;color:var(--moss);background:#e7ecd8;border-radius:5px;padding:3px 8px;margin-bottom:4px}
+.car-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.car-head h2{font-size:clamp(34px,4vw,54px);color:var(--moss)}
+.car-head p{color:var(--muted);margin:10px 0 0;max-width:32em}
+.car-nav{display:flex;gap:10px}
+.car-nav button{width:52px;height:52px;border-radius:50%;border:2px solid var(--moss);background:transparent;color:var(--moss);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s,opacity .2s}
+.car-nav button:hover{background:var(--moss);color:#fff}
+.car-nav button:disabled{opacity:.3;pointer-events:none}
+.car-nav svg{width:22px;height:22px}
+.carousel{--pad:max(20px,calc((100vw - 1180px) / 2));display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);padding:6px var(--pad) 24px;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab;overscroll-behavior-x:contain}
+.carousel::-webkit-scrollbar{display:none}
+.carousel.dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.carousel.dragging a{pointer-events:none}
+.slide{position:relative;flex:0 0 clamp(270px,27vw,350px);aspect-ratio:3/4;border-radius:18px;overflow:hidden;scroll-snap-align:start;color:#fff;background:var(--moss-dd);user-select:none;-webkit-user-drag:none}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease;-webkit-user-drag:none;pointer-events:none}
+.slide:hover img{transform:scale(1.06)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,19,9,.92) 0%,rgba(14,19,9,.55) 34%,rgba(14,19,9,0) 60%);pointer-events:none}
+.slide .info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 22px 24px}
+.slide .tag{display:inline-block;font-size:12px;font-weight:800;color:var(--ink);background:var(--olive);border-radius:5px;padding:3px 8px;margin-bottom:10px}
+.slide h3{font-size:31px;color:#fff;margin-bottom:6px}
+.slide p{margin:0 0 14px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.85)}
+.slide .go{font-weight:800;font-size:15px;color:var(--olive);display:inline-flex;align-items:center;gap:6px}
+.slide .go svg{width:16px;height:16px;transition:transform .2s}
+.slide:hover .go svg{transform:translateX(4px)}
+.slide.light{background:var(--olive);color:var(--ink)}
+.slide.light::after{display:none}
+.slide.light img{inset:28px 28px auto 28px;width:calc(100% - 56px);height:54%;object-fit:contain}
+.slide.light h3{color:var(--ink)}
+.slide.light p{color:rgba(31,38,24,.8)}
+.slide.light .go{color:var(--moss-d)}
+.car-dots{display:flex;justify-content:center;gap:8px;margin-top:6px}
+.car-dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#cfc8b3;cursor:pointer;transition:width .3s,background .3s}
+.car-dots button.on{width:26px;background:var(--moss)}
 
 /* terrário */
 .terra{background:var(--moss-dd)}
@@ -196,14 +219,15 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
 /* responsivo */
 @media (max-width:1080px){
   .nav{display:none}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .card,.card.wide{grid-column:span 1}
-  .card.wide .ph{aspect-ratio:4/3}
   .foot{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){
-  .hero{padding:28px 0 56px}
-  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-b{display:block;min-height:0}
+  .hero-media{position:relative;inset:auto;height:66vw;max-height:460px}
+  .hero-media img{object-position:50% 45%}
+  .hero-shade{inset:0 0 auto 0;height:66vw;max-height:460px;background:linear-gradient(0deg,var(--moss-dd) 2%,rgba(30,41,19,.55) 30%,rgba(30,41,19,0) 60%)}
+  .hero-content{margin-top:-34px;padding:0 0 40px}
+  .car-nav{display:none}
   .aqua-grid{grid-template-columns:1fr;min-height:auto;padding:64px 0 0;gap:0}
   .aqua-stage{height:100vh;height:100svh;justify-content:center;padding:24px 0}
   .stage-title{display:block;font-family:"Lilita One";font-size:24px;text-align:center;color:#fff}
@@ -227,7 +251,9 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
   .logo img{height:56px}
   .site-header .btn span{display:none}
   .site-header .btn{padding:11px}
-  .cards{grid-template-columns:1fr}
+  .hero-b h1{font-size:50px}
+  .strip figure{width:150px}
+  .slide{flex-basis:78vw}
   .ctas .btn{flex:1 1 auto}
   .stats{grid-template-columns:1fr 1fr 1fr}
   .stats div{padding:0 12px}
@@ -263,23 +289,23 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
 </header>
 
 <main id="topo">
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1 data-in>Lugar de bicho legal!</h1>
-      <p class="lead" data-in>A maior loja do Brasil especializada em <strong>aquarismo, animais exóticos e silvestres</strong>. São mais de 30 anos na Vila Leopoldina, com animais totalmente legalizados e gente que entende de cada espécie.</p>
-      <div class="ctas" data-in>
-        <a class="btn btn-moss" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Chamar no WhatsApp</a>
-        <a class="btn btn-out" href="#visite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
-      </div>
-      <div class="rating" data-in><span class="stars">★★★★★</span><span><b>4,6 no Google</b> · mais de 2.600 avaliações</span></div>
+<section class="hero-b">
+  <div class="hero-media"><img src="img/fachada.webp" alt="Fachada da Galpão Animal na Rua Baumann, Vila Leopoldina" width="1595" height="750" fetchpriority="high"></div>
+  <div class="hero-shade"></div>
+  <div class="container hero-content">
+    <span class="hero-kicker" data-in>Vila Leopoldina · São Paulo · há mais de 30 anos</span>
+    <h1 data-in>Lugar de bicho legal!</h1>
+    <p class="lead" data-in>A maior loja do Brasil especializada em <strong>aquarismo, animais exóticos e silvestres</strong>. Animais totalmente legalizados e gente que entende de cada espécie.</p>
+    <div class="ctas" data-in>
+      <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Chamar no WhatsApp</a>
+      <a class="btn btn-ghost" href="#visite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
     </div>
-    <div class="mosaic">
-      <figure class="m-main" data-in><img src="img/fachada.webp" alt="Fachada da Galpão Animal na Rua Baumann" width="1595" height="750"><figcaption>Nossa loja na Vila Leopoldina</figcaption></figure>
-      <figure class="m-a" data-in><img src="img/ararajuba.webp" alt="Ararajuba" width="1715" height="750" style="object-position:62% 40%"></figure>
-      <figure class="m-b" data-in><img src="img/furao.webp" alt="Furão" width="1675" height="750" style="object-position:28% 30%"></figure>
-    </div>
+    <div class="rating" data-in><span class="stars">★★★★★</span><span><b>4,6 no Google</b> · mais de 2.600 avaliações</span></div>
   </div>
+</section>
+
+<section class="strip" aria-label="Alguns dos bichos da loja">
+  <div class="strip-track"><div class="strip-group"><figure><img src="img/ararajuba.webp" alt="Ararajuba" loading="lazy" style="object-position:62% 40%"><figcaption>Ararajuba</figcaption></figure><figure><img src="img/jandaia.webp" alt="Jandaia-sol" loading="lazy" style="object-position:55% 40%"><figcaption>Jandaia-sol</figcaption></figure><figure><img src="img/peixe-azul.webp" alt="Aquário marinho" loading="lazy" style="object-position:45% 50%"><figcaption>Aquário marinho</figcaption></figure><figure><img src="img/furao.webp" alt="Furão" loading="lazy" style="object-position:30% 40%"><figcaption>Furão</figcaption></figure><figure><img src="img/papagaio.webp" alt="Papagaio-verdadeiro" loading="lazy" style="object-position:45% 40%"><figcaption>Papagaio-verdadeiro</figcaption></figure><figure><img src="img/tartaruga.webp" alt="Tartaruga" loading="lazy" style="object-position:40% 50%"><figcaption>Tartaruga</figcaption></figure><figure><img src="img/arara-azul.webp" alt="Arara-azul" loading="lazy" style="object-position:40% 40%"><figcaption>Arara-azul</figcaption></figure><figure><img src="img/peixe-bolinha.webp" alt="Kinguio" loading="lazy" style="object-position:40% 50%"><figcaption>Kinguio</figcaption></figure><figure><img src="img/turaco.webp" alt="Turaco" loading="lazy" style="object-position:55% 45%"><figcaption>Turaco</figcaption></figure><figure><img src="img/tartarugas.webp" alt="Quelônios" loading="lazy" style="object-position:50% 40%"><figcaption>Quelônios</figcaption></figure></div><div class="strip-group" aria-hidden="true"><figure><img src="img/ararajuba.webp" alt="Ararajuba" loading="lazy" style="object-position:62% 40%"><figcaption>Ararajuba</figcaption></figure><figure><img src="img/jandaia.webp" alt="Jandaia-sol" loading="lazy" style="object-position:55% 40%"><figcaption>Jandaia-sol</figcaption></figure><figure><img src="img/peixe-azul.webp" alt="Aquário marinho" loading="lazy" style="object-position:45% 50%"><figcaption>Aquário marinho</figcaption></figure><figure><img src="img/furao.webp" alt="Furão" loading="lazy" style="object-position:30% 40%"><figcaption>Furão</figcaption></figure><figure><img src="img/papagaio.webp" alt="Papagaio-verdadeiro" loading="lazy" style="object-position:45% 40%"><figcaption>Papagaio-verdadeiro</figcaption></figure><figure><img src="img/tartaruga.webp" alt="Tartaruga" loading="lazy" style="object-position:40% 50%"><figcaption>Tartaruga</figcaption></figure><figure><img src="img/arara-azul.webp" alt="Arara-azul" loading="lazy" style="object-position:40% 40%"><figcaption>Arara-azul</figcaption></figure><figure><img src="img/peixe-bolinha.webp" alt="Kinguio" loading="lazy" style="object-position:40% 50%"><figcaption>Kinguio</figcaption></figure><figure><img src="img/turaco.webp" alt="Turaco" loading="lazy" style="object-position:55% 45%"><figcaption>Turaco</figcaption></figure><figure><img src="img/tartarugas.webp" alt="Quelônios" loading="lazy" style="object-position:50% 40%"><figcaption>Quelônios</figcaption></figure></div></div>
 </section>
 
 <section class="aqua dark" id="aquarismo">
@@ -410,34 +436,43 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
 </section>
 
 <section class="section" id="setores">
-  <div class="container">
-    <div class="sec-head" data-reveal>
+  <div class="container car-head" data-reveal>
+    <div>
       <h2>O que você encontra na Galpão</h2>
-      <p>Cada setor tem gente especializada, produtos certos e animais saudáveis e legalizados. Na dúvida, chame no WhatsApp que a gente orienta.</p>
+      <p>Cada setor tem gente especializada e animais saudáveis e legalizados. Arraste para o lado e escolha.</p>
     </div>
-    <div class="cards">
-      <a class="card" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener" data-reveal>
-        <div class="ph"><img src="img/peixe-azul.webp" alt="Peixe cirurgião azul" loading="lazy" width="1600" height="1067"></div>
-        <div class="body"><span class="tag">Atendimento próprio</span><h3>Aquarismo</h3><p>Peixes, plantas, aquários montados, filtros, iluminação e manutenção.</p><span class="go">Falar com o Aquarismo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-      </a>
-      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20aves." target="_blank" rel="noopener" data-reveal>
-        <div class="ph"><img src="img/ararajuba.webp" alt="Ararajuba" loading="lazy" width="1715" height="750" style="object-position:60% 40%"></div>
-        <div class="body"><h3>Aves</h3><p>Ararajubas, papagaios, jandaias, calopsitas e muitas outras, com gaiolas e alimentação.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-      </a>
-      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20r%C3%A9pteis%20e%20terr%C3%A1rios." target="_blank" rel="noopener" data-reveal>
-        <div class="ph"><img src="img/tartaruga.webp" alt="Tartaruga" loading="lazy" width="1735" height="750" style="object-position:40% 50%"></div>
-        <div class="body"><h3>Répteis</h3><p>Serpentes, lagartos e quelônios, com terrários, lâmpadas e tudo para o habitat.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-      </a>
-      <a class="card wide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20pequenos%20ex%C3%B3ticos%20%28fur%C3%B5es%2C%20ouri%C3%A7os...%29." target="_blank" rel="noopener" data-reveal>
-        <div class="ph"><img src="img/furao.webp" alt="Furão" loading="lazy" width="1675" height="750" style="object-position:30% 35%"></div>
-        <div class="body"><h3>Pequenos exóticos</h3><p>Furões, ouriços e outros pets não convencionais, com orientação de manejo e cuidados.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-      </a>
-      <a class="card wide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20de%20ra%C3%A7%C3%B5es/acess%C3%B3rios." target="_blank" rel="noopener" data-reveal>
-        <div class="ph contain"><img src="img/racao.webp" alt="Ração Megazoo para papagaios" loading="lazy" width="600" height="788"></div>
-        <div class="body"><h3>Rações e acessórios</h3><p>Alimentação específica para cada espécie, suplementos e equipamentos. Retire na loja ou receba em casa.</p><span class="go">Fazer pedido <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-      </a>
+    <div class="car-nav">
+      <button type="button" class="car-prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="car-next" aria-label="Próximo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
   </div>
+  <div class="carousel" tabindex="0" aria-label="Setores da loja">
+    <a class="slide" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener">
+      <img src="img/peixe-azul.webp" alt="Peixe marinho azul" loading="lazy" width="1600" height="1067" style="object-position:40% 50%">
+      <div class="info"><span class="tag">Atendimento próprio</span><h3>Aquarismo</h3><p>Peixes, plantas, aquários montados, filtros e iluminação.</p><span class="go">Falar com o Aquarismo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="slide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20aves." target="_blank" rel="noopener">
+      <img src="img/arara-azul.webp" alt="Arara-azul" loading="lazy" width="470" height="600">
+      <div class="info"><h3>Aves</h3><p>Araras, papagaios, ararajubas, jandaias, turacos e muito mais.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="slide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20r%C3%A9pteis%20e%20terr%C3%A1rios." target="_blank" rel="noopener">
+      <img src="img/tartarugas.webp" alt="Tartarugas" loading="lazy" width="827" height="1014" style="object-position:50% 40%">
+      <div class="info"><h3>Répteis</h3><p>Serpentes, lagartos e quelônios, com terrários e tudo para o habitat.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="slide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20pequenos%20ex%C3%B3ticos%20%28fur%C3%B5es%2C%20ouri%C3%A7os...%29." target="_blank" rel="noopener">
+      <img src="img/furao.webp" alt="Furão" loading="lazy" width="1675" height="750" style="object-position:30% 40%">
+      <div class="info"><h3>Pequenos exóticos</h3><p>Furões, ouriços e outros pets não convencionais.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="slide light" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20de%20ra%C3%A7%C3%B5es/acess%C3%B3rios." target="_blank" rel="noopener">
+      <img src="img/racao.webp" alt="Ração Megazoo para papagaios" loading="lazy" width="600" height="788">
+      <div class="info"><h3>Rações e acessórios</h3><p>Alimentação certa para cada espécie. Retire na loja ou receba em casa.</p><span class="go">Fazer pedido <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+    <a class="slide" href="#visite">
+      <img src="img/fachada.webp" alt="Fachada da loja" loading="lazy" width="1595" height="750" style="object-position:52% 50%">
+      <div class="info"><span class="tag">Rua Baumann, 1363</span><h3>Venha conhecer</h3><p>Muita gente vem só para ver os bichos de perto.</p><span class="go">Como chegar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+  </div>
+  <div class="car-dots" aria-hidden="true"></div>
 </section>
 
 <section class="terra dark" id="repteis">
@@ -561,7 +596,7 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
 <section class="section" id="sobre">
   <div class="container about">
     <div class="about-photos" data-reveal>
-      <div class="p1"><img src="img/tartarugas.webp" alt="Tartarugas na loja" loading="lazy" width="827" height="1014"></div>
+      <div class="p1"><img src="img/papagaio.webp" alt="Papagaio-verdadeiro" loading="lazy" width="800" height="690" style="object-position:38% 50%"></div>
       <div class="p2"><img src="img/peixe-bolinha.webp" alt="Peixe japonês" loading="lazy" width="1024" height="683"></div>
     </div>
     <div>
@@ -680,6 +715,58 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
     });
   }catch(e){}
 })();
+
+/* carrossel de setores: arrastar, setas e pontos */
+(function(){
+  var car = document.querySelector('.carousel'); if(!car) return;
+  var slides = car.querySelectorAll('.slide');
+  var prev = document.querySelector('.car-prev'), next = document.querySelector('.car-next');
+  var dotsBox = document.querySelector('.car-dots');
+  slides.forEach(function(_, i){
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Ir para o card ' + (i+1));
+    b.addEventListener('click', function(){ go(i); }); dotsBox.appendChild(b);
+  });
+  var dots = dotsBox.querySelectorAll('button');
+  function step(){ var s = slides[0]; return s.getBoundingClientRect().width + parseFloat(getComputedStyle(car).columnGap || 18); }
+  function idx(){ return Math.round(car.scrollLeft / step()); }
+  function go(i){ car.scrollTo({left: i * step(), behavior: 'smooth'}); }
+  function update(){
+    var i = Math.min(idx(), slides.length - 1), max = car.scrollWidth - car.clientWidth - 2;
+    dots.forEach(function(d, k){ d.classList.toggle('on', k === i); });
+    if(prev) prev.disabled = car.scrollLeft <= 2;
+    if(next) next.disabled = car.scrollLeft >= max;
+  }
+  if(prev) prev.addEventListener('click', function(){ car.scrollBy({left: -step(), behavior: 'smooth'}); });
+  if(next) next.addEventListener('click', function(){ car.scrollBy({left: step(), behavior: 'smooth'}); });
+  car.addEventListener('scroll', function(){ window.requestAnimationFrame(update); }, {passive: true});
+  window.addEventListener('resize', update);
+  update();
+  /* arrastar com o mouse (no toque o navegador já faz) */
+  var down = false, moved = false, startX = 0, startLeft = 0;
+  car.addEventListener('pointerdown', function(e){
+    if(e.pointerType !== 'mouse' || e.button !== 0) return;
+    down = true; moved = false; startX = e.clientX; startLeft = car.scrollLeft;
+  });
+  window.addEventListener('pointermove', function(e){
+    if(!down) return;
+    var dx = e.clientX - startX;
+    if(!moved && Math.abs(dx) > 6){ moved = true; car.classList.add('dragging'); }
+    if(moved){ car.scrollLeft = startLeft - dx; e.preventDefault(); }
+  });
+  window.addEventListener('pointerup', function(){
+    if(!down) return; down = false;
+    if(moved){
+      var target = Math.round(car.scrollLeft / step());
+      car.classList.remove('dragging');
+      go(target);
+    }
+  });
+  car.addEventListener('click', function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  car.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight'){ e.preventDefault(); go(Math.min(idx()+1, slides.length-1)); }
+    if(e.key === 'ArrowLeft'){ e.preventDefault(); go(Math.max(idx()-1, 0)); }
+  });
+})();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -772,7 +859,10 @@ footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px
 
   if(reduce) return;
 
-  gsap.from('[data-in]', {y:18, opacity:0, duration:.8, ease:'power2.out', stagger:.07, delay:.1});
+  gsap.from('.hero-media img', {scale:1.12, duration:2.2, ease:'power2.out'});
+  gsap.from('[data-in]', {y:22, opacity:0, duration:.9, ease:'power3.out', stagger:.08, delay:.25});
+  gsap.to('.hero-media', {yPercent:12, ease:'none', scrollTrigger:{trigger:'.hero-b', start:'top top', end:'bottom top', scrub:true}});
+  gsap.from('.carousel .slide', {x:80, opacity:0, duration:.9, ease:'power3.out', stagger:.08, scrollTrigger:{trigger:'.carousel', start:'top 85%'}});
 
   gsap.utils.toArray('[data-reveal]').forEach(function(el){
     gsap.from(el, {y:28, opacity:0, duration:.8, ease:'power2.out', scrollTrigger:{trigger:el, start:'top 88%'}});
