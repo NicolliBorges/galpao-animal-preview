@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galpão Animal — Lugar de bicho legal</title>
+<meta name="description" content="Galpão Animal: pioneira no Brasil em aquarismo, aves, répteis e animais exóticos. Há mais de 30 anos, totalmente legalizados. Rua Baumann, 1363 – Vila Leopoldina, São Paulo.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Galpão Animal — Lugar de bicho legal">
+<meta property="og:description" content="Aquarismo, aves, répteis e exóticos há mais de 30 anos em São Paulo.">
+<meta name="theme-color" content="#0f2219">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f2219'/%3E%3Cpath d='M12 33c7-10 20-13 31-6l8-7v26l-8-7c-11 7-24 4-31-6z' fill='%23d2c95c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1610; --jungle:#0f2219; --jungle2:#16301f; --leaf:#2f6b3f;
+  --olive:#d2c95c; --olive2:#e9e28c; --cream:#f6f2e4; --cream2:#ece5cd;
+  --text:#14211a; --muted:#5b6a60; --light:#eef2ea; --light-dim:rgba(238,242,234,.72);
+  --red:#e2512f; --orange:#f2a12a; --blue:#2b91d4; --wa:#25d366;
+  --r:24px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--jungle);color:var(--light);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;margin:0;letter-spacing:-.025em}
+em{font-style:normal;color:var(--olive)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--olive)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgba(210,201,92,.18)}
+.light-sec .eyebrow{color:#7a7322}
+.light-sec .eyebrow::before{box-shadow:0 0 0 4px rgba(122,115,34,.15)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-olive{background:var(--olive);color:var(--ink);box-shadow:0 10px 30px -10px rgba(210,201,92,.6)}
+.btn-olive:hover{background:var(--olive2)}
+.btn-ghost{border:1px solid rgba(238,242,234,.25);color:var(--light)}
+.btn-ghost:hover{background:rgba(238,242,234,.08)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{background:#13261b}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:rgba(10,22,16,.06)}
+
+/* header */
+.site-header{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
+.site-header .bar{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 9px 9px 20px;border-radius:999px;background:rgba(10,22,16,.86);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Lilita One",sans-serif;font-size:22px;letter-spacing:.02em;color:var(--olive);line-height:1}
+.brand svg{width:30px;height:30px}
+.nav{display:flex;gap:26px;font-size:14px;color:var(--light-dim)}
+.nav a:hover{color:var(--light)}
+.site-header .btn{padding:11px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 600px at 78% 55%,rgba(43,145,212,.16),transparent 60%),
+  radial-gradient(700px 500px at 10% 10%,rgba(210,201,92,.10),transparent 60%),
+  linear-gradient(180deg,#0d1f16 0%,#0f2219 100%)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:48px;min-height:100vh;min-height:100svh;padding-top:96px;padding-bottom:28px}
+.hero h1{font-size:clamp(46px,6.6vw,96px);line-height:.94;font-weight:800;margin:22px 0 22px}
+.reveal-line{display:block;overflow:hidden;padding-bottom:.06em}
+.reveal-line>span{display:inline-block}
+.hero p.lead{font-size:clamp(16px,1.35vw,19px);line-height:1.6;color:var(--light-dim);max-width:520px;margin:0 0 30px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:14px;color:var(--light-dim)}
+.proof strong{display:block;font-family:"Bricolage Grotesque";font-size:26px;color:var(--light);letter-spacing:-.02em}
+.proof .stars{color:var(--orange);letter-spacing:2px;font-size:13px}
+.leaf{position:absolute;z-index:1;pointer-events:none;opacity:.55}
+.leaf path{fill:#1b4a2d}
+.leaf .rib{fill:none;stroke:#0f2a19;stroke-width:3}
+.leaf-a{width:340px;left:-90px;bottom:-60px;transform:rotate(-20deg)}
+.leaf-b{width:260px;right:-70px;top:60px;transform:rotate(160deg)}
+
+/* aquarium stage */
+.aqua-stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px}
+.aqua-stage .stage-title{display:none}
+#aquarium{width:100%;max-width:640px;height:auto;max-height:62vh;max-height:62svh;overflow:visible}
+.aq-caption{width:100%;max-width:560px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:14px 18px 16px;backdrop-filter:blur(6px)}
+.aq-bars{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:12px}
+.aq-bars span{height:3px;border-radius:3px;background:rgba(255,255,255,.12);transition:background .35s ease}
+.aq-bars span.on{background:var(--olive)}
+.aq-body{display:flex;gap:14px;align-items:flex-start;min-height:46px}
+.aq-num{font-family:"Bricolage Grotesque";font-weight:800;font-size:28px;line-height:1;color:var(--olive);min-width:38px}
+.aq-text strong{display:block;font-family:"Bricolage Grotesque";font-size:18px;letter-spacing:-.01em;margin-bottom:3px}
+.aq-text span{font-size:14px;color:var(--light-dim);line-height:1.45}
+.aq-text a{color:var(--olive);font-weight:600}
+.scroll-hint{display:inline-flex;align-items:center;gap:8px}
+.mouse{width:16px;height:24px;border:1.5px solid var(--light-dim);border-radius:10px;position:relative;flex:none}
+.mouse::after{content:"";position:absolute;left:50%;top:5px;width:2px;height:5px;margin-left:-1px;border-radius:2px;background:var(--olive);animation:wheel 1.6s ease-in-out infinite}
+@keyframes wheel{0%{opacity:0;transform:translateY(-2px)}40%{opacity:1}100%{opacity:0;transform:translateY(7px)}}
+
+/* svg animation helpers */
+#aquarium .wave{animation:wave 3.2s linear infinite}
+@keyframes wave{to{transform:translateX(-120px)}}
+#aquarium .bob{transform-box:fill-box;animation:bob 3.4s ease-in-out infinite}
+#aquarium .fish:nth-child(2n) .bob{animation-duration:2.8s;animation-delay:-1s}
+#aquarium .fish:nth-child(3n) .bob{animation-duration:4s;animation-delay:-2s}
+@keyframes bob{50%{transform:translate(7px,-4px)}}
+#aquarium .bubble{transform-box:fill-box;animation:rise 4.2s linear infinite;opacity:0}
+@keyframes rise{0%{transform:translateY(0);opacity:0}12%{opacity:.9}100%{transform:translateY(-270px);opacity:0}}
+#terra .g-tail{transform-box:fill-box;transform-origin:0% 60%;animation:tail 2.6s ease-in-out infinite}
+@keyframes tail{50%{transform:rotate(-7deg)}}
+#terra .glow{animation:glow 2.8s ease-in-out infinite}
+@keyframes glow{50%{opacity:.6}}
+#terra .ll{stroke:rgba(210,201,92,.75);stroke-width:1.5;stroke-dasharray:3 5}
+#terra .ld{fill:var(--olive)}
+#terra .lt{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:23px;fill:#f3efe0;letter-spacing:-.01em}
+#terra .ls{font-family:Inter,sans-serif;font-size:15.5px;fill:rgba(243,239,224,.62)}
+
+/* marquee */
+.marquee{background:var(--olive);color:var(--ink);overflow:hidden;padding:18px 0;position:relative;z-index:3}
+.marquee .track{display:flex;width:max-content;animation:marquee 34s linear infinite}
+.marquee .group{display:flex;align-items:center;gap:34px;padding-right:34px;font-family:"Lilita One",sans-serif;font-size:clamp(22px,2.6vw,32px);letter-spacing:.01em;white-space:nowrap}
+.marquee svg{width:22px;height:22px;flex:none}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* light sections */
+.light-sec{background:var(--cream);color:var(--text)}
+.section{padding:clamp(80px,11vw,140px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,4.6vw,64px);line-height:1;font-weight:800;max-width:720px;margin-top:16px}
+.light-sec em{color:#6d8f2e}
+.sec-head p{max-width:400px;color:var(--muted);line-height:1.6;margin:0}
+
+/* setores */
+.setores{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:auto auto;gap:18px}
+.card{position:relative;border-radius:var(--r);padding:30px;background:#fffdf5;border:1px solid rgba(20,33,26,.08);display:flex;flex-direction:column;gap:12px;transition:transform .35s ease,box-shadow .35s ease;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(20,33,26,.35)}
+.card .ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--cream2);color:var(--text);margin-bottom:8px}
+.card .ico svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:26px;font-weight:700}
+.card p{margin:0;color:var(--muted);line-height:1.6;font-size:15px}
+.card .go{margin-top:auto;padding-top:14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.card .go svg{width:16px;height:16px;transition:transform .25s}
+.card:hover .go svg{transform:translateX(4px)}
+.card-big{grid-row:span 2;background:linear-gradient(160deg,#0f3a4a 0%,#0c2a33 55%,#0f2219 100%);color:var(--light);border:none;padding:36px;min-height:520px}
+.card-big .ico{background:rgba(255,255,255,.1);color:var(--light)}
+.card-big p{color:var(--light-dim)}
+.card-big h3{font-size:clamp(32px,3vw,42px);font-weight:800}
+.card-big .tag{position:absolute;top:30px;right:30px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:rgba(210,201,92,.16);color:var(--olive)}
+.card-big .mini-fish{position:absolute;right:-30px;bottom:110px;width:260px;opacity:.9}
+.card-big .go{color:var(--olive)}
+
+/* terra */
+.terra{position:relative;background:radial-gradient(700px 600px at 70% 50%,rgba(242,161,42,.10),transparent 60%),linear-gradient(180deg,#0f2219,#0b1a13)}
+.terra-inner{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:40px;min-height:100vh;min-height:100svh;padding:60px 0}
+.terra h2{font-size:clamp(36px,4.4vw,62px);line-height:1;font-weight:800;margin:18px 0 20px}
+.terra p{color:var(--light-dim);line-height:1.65;max-width:470px;margin:0 0 26px;font-size:17px}
+.checks{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:center;font-size:15.5px}
+.checks svg{width:22px;height:22px;flex:none;color:var(--olive)}
+.terra-stage{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.terra-stage .stage-title{display:none}
+#terra{width:100%;max-width:600px;height:auto;max-height:88vh;max-height:88svh}
+
+/* numbers */
+.numbers{background:var(--ink)}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.num{border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:30px 26px;background:rgba(255,255,255,.025)}
+.num .big{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(46px,5vw,70px);line-height:1;color:var(--olive);letter-spacing:-.03em}
+.num .big small{font-size:.5em;margin-left:4px}
+.num p{margin:12px 0 0;color:var(--light-dim);line-height:1.5;font-size:15px}
+.numbers .sec-head p{color:var(--light-dim)}
+
+/* online store band */
+.band{background:linear-gradient(120deg,var(--olive) 0%,#c4bb48 100%);color:var(--ink);border-radius:32px;padding:clamp(34px,5vw,64px);display:grid;grid-template-columns:1.3fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
+.band h2{font-size:clamp(32px,4vw,54px);line-height:1;font-weight:800}
+.band p{margin:14px 0 0;font-size:17px;line-height:1.55;max-width:560px;color:rgba(10,22,16,.75)}
+.band .ctas{display:flex;flex-direction:column;gap:12px}
+.band .paw{position:absolute;right:-30px;top:-40px;width:200px;opacity:.12}
+.band-wrap{background:var(--cream);padding:0 0 clamp(80px,10vw,120px)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:18px}
+.visit-card{background:#fffdf5;border:1px solid rgba(20,33,26,.08);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.visit-photo{position:relative;aspect-ratio:16/8;background:#cfd8c8 center/cover no-repeat}
+.visit-photo img{width:100%;height:100%;object-fit:cover}
+.logo-badge{position:absolute;left:20px;bottom:-34px;width:96px;height:96px;border-radius:24px;background:var(--cream);box-shadow:0 12px 30px -12px rgba(0,0,0,.35);display:grid;place-items:center;padding:6px}
+.logo-badge img{width:100%;height:100%;object-fit:contain}
+.visit-info{padding:52px 28px 28px;display:grid;gap:18px}
+.row{display:flex;gap:14px;align-items:flex-start}
+.row svg{width:22px;height:22px;flex:none;color:#6d8f2e;margin-top:2px}
+.row strong{display:block;font-size:15px;margin-bottom:2px}
+.row span,.row a{color:var(--muted);font-size:15px;line-height:1.55}
+.row a:hover{color:var(--text)}
+.visit-info .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.map{border-radius:var(--r);overflow:hidden;min-height:440px;border:1px solid rgba(20,33,26,.08);background:#dfe5d6}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:saturate(.85)}
+
+/* footer */
+footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-size:14.5px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.foot h4{font-family:"Bricolage Grotesque";color:var(--light);font-size:16px;margin:0 0 14px;letter-spacing:-.01em}
+.foot a:hover{color:var(--light)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot .logo-sq{width:104px;height:104px;border-radius:24px;background:var(--cream);padding:6px;margin-bottom:16px}
+.foot .logo-sq img{width:100%;height:100%;object-fit:contain}
+.slogan{font-family:"Lilita One";font-size:22px;color:var(--olive)}
+.foot-bottom{margin-top:50px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+.kodra{display:inline-flex;align-items:center;gap:8px;color:var(--light-dim)}
+.kodra b{color:var(--olive);font-weight:600}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.7);transition:transform .25s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float svg{width:30px;height:30px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{display:none}
+  .setores{grid-template-columns:1fr 1fr}
+  .card-big{grid-row:auto;grid-column:span 2;min-height:420px}
+  .nums{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;min-height:auto;padding-top:120px;padding-bottom:40px;gap:0}
+  .aqua-stage{height:100vh;height:100svh;justify-content:center;padding:70px 0 20px}
+  .aqua-stage .stage-title{display:block;font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;text-align:center;letter-spacing:-.02em}
+  #aquarium{max-height:46svh}
+  .terra-inner{grid-template-columns:1fr;min-height:auto;padding:90px 0 0;gap:0}
+  .terra-stage{height:100vh;height:100svh;padding:70px 0 10px}
+  .terra-stage .stage-title{display:block;font-family:"Bricolage Grotesque";font-weight:800;font-size:24px;text-align:center;margin-bottom:6px}
+  #terra{max-height:calc(100svh - 120px)}
+  #terra .lt{font-size:27px}
+  #terra .ls{font-size:18px}
+  .visit{grid-template-columns:1fr}
+  .band{grid-template-columns:1fr}
+  .band .ctas{flex-direction:row;flex-wrap:wrap}
+}
+@media (max-width:640px){
+  .container{width:calc(100% - 32px)}
+  .site-header .bar{padding:7px 7px 7px 16px}
+  .brand{font-size:19px}
+  .brand svg{width:26px;height:26px}
+  .site-header .btn span{display:none}
+  .site-header .btn{padding:11px}
+  .setores{grid-template-columns:1fr}
+  .card-big{grid-column:auto;min-height:440px;padding:30px}
+  .card-big .mini-fish{width:200px;bottom:120px}
+  .nums{grid-template-columns:1fr}
+  .proof{gap:18px}
+  .foot{grid-template-columns:1fr}
+  .btn{padding:14px 20px}
+  .hero .ctas .btn{flex:1 1 auto;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="#topo" class="brand" aria-label="Galpão Animal — início">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 25c6-9 18-12 28-6l8-7v24l-8-7c-10 6-22 3-28-4z"/><circle cx="14" cy="22.5" r="1.6" fill="currentColor"/></svg>
+      GALPÃO ANIMAL
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#setores">Setores</a>
+      <a href="#terrarios">Répteis</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#visite">Visite</a>
+    </nav>
+    <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Falar no WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="topo">
+<!-- HERO + AQUÁRIO -->
+<section class="hero" id="aquarismo">
+  <svg class="leaf leaf-a" viewBox="0 0 300 120" aria-hidden="true"><path d="M0,60 C60,-10 200,-10 300,60 C200,130 60,130 0,60Z"/><path class="rib" d="M10,60 L290,60 M80,60 L60,30 M130,60 L110,22 M180,60 L165,22 M230,60 L220,30 M80,60 L60,90 M130,60 L110,98 M180,60 L165,98 M230,60 L220,90"/></svg>
+  <svg class="leaf leaf-b" viewBox="0 0 300 120" aria-hidden="true"><path d="M0,60 C60,-10 200,-10 300,60 C200,130 60,130 0,60Z"/><path class="rib" d="M10,60 L290,60 M80,60 L60,30 M130,60 L110,22 M180,60 L165,22 M230,60 L220,30 M80,60 L60,90 M130,60 L110,98 M180,60 L165,98 M230,60 L220,90"/></svg>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow" data-fade>Pioneira no Brasil em pets não convencionais</span>
+      <h1><span class="reveal-line"><span>Lugar de</span></span><span class="reveal-line"><span><em>bicho legal.</em></span></span></h1>
+      <p class="lead" data-fade>Aquarismo, aves, répteis e exóticos. Há mais de 30 anos em São Paulo, com animais totalmente legalizados e atendimento de quem entende de verdade.</p>
+      <div class="ctas" data-fade>
+        <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#visite">Conhecer a loja</a>
+      </div>
+      <div class="proof" data-fade>
+        <div><strong>4,6 <span class="stars">★★★★★</span></strong>2.600+ avaliações no Google</div>
+        <div><strong>133 mil</strong>seguidores no Instagram</div>
+        <div><strong>+30 anos</strong>de história</div>
+      </div>
+    </div>
+
+    <div class="aqua-stage">
+      <div class="stage-title">Role e monte o aquário <em>↓</em></div>
+      <svg id="aquarium" viewBox="0 0 640 520" role="img" aria-label="Aquário plantado sendo montado: substrato, rochas, tronco, plantas, água e peixes">
+        <defs>
+          <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fc0dd" stop-opacity=".55"/><stop offset="1" stop-color="#0a4660" stop-opacity=".88"/></linearGradient>
+          <linearGradient id="sandG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6cf98"/><stop offset="1" stop-color="#a98652"/></linearGradient>
+          <linearGradient id="rockG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9aa6ab"/><stop offset="1" stop-color="#46525a"/></linearGradient>
+          <linearGradient id="rock2G" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b2aa96"/><stop offset="1" stop-color="#5c574b"/></linearGradient>
+          <linearGradient id="standG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e2117"/><stop offset="1" stop-color="#1a120c"/></linearGradient>
+          <linearGradient id="glassG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".5" stop-color="#fff" stop-opacity=".015"/><stop offset="1" stop-color="#fff" stop-opacity=".07"/></linearGradient>
+          <linearGradient id="lightG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff4c2" stop-opacity=".5"/><stop offset="1" stop-color="#fff4c2" stop-opacity="0"/></linearGradient>
+          <clipPath id="tankClip"><rect x="84" y="94" width="472" height="332" rx="6"/></clipPath>
+          <symbol id="tetra" viewBox="0 0 40 16"><path d="M6,8 L0,2 L1.5,8 L0,14 Z" fill="#d7ecf3" opacity=".85"/><path d="M4,8 C12,1 28,1 37,8 C28,15 12,15 4,8Z" fill="#d7ecf3"/><path d="M10,7 C18,4.6 26,4.6 34,7" stroke="#22d3ff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M10,10.2 C16,12.4 22,12.4 28,10.6" stroke="#ff3b3b" stroke-width="2.8" fill="none" stroke-linecap="round"/><circle cx="31.5" cy="6.8" r="1.5" fill="#111"/></symbol>
+          <symbol id="angel" viewBox="0 0 50 54"><path d="M20,18 C24,8 28,3 31,0 C31,8 31,14 33,19Z" fill="#e9edf0"/><path d="M20,36 C24,46 28,51 31,54 C31,46 31,40 33,35Z" fill="#e9edf0"/><path d="M9,27 L0,20 L2,27 L0,34Z" fill="#dfe4e8"/><path d="M8,27 C14,16 28,14 41,27 C28,40 14,38 8,27Z" fill="#f1f3f5"/><path d="M18,18.5 L18,35.5 M27,16.5 L27,37.5" stroke="#262626" stroke-width="2.6" stroke-linecap="round"/><circle cx="35.5" cy="25" r="1.8" fill="#111"/></symbol>
+          <symbol id="platy" viewBox="0 0 38 20"><path d="M6,10 L0,4 L1.5,10 L0,16Z" fill="#ff6a00"/><path d="M4,10 C10,2 26,2 35,10 C26,18 10,18 4,10Z" fill="#ff8a2a"/><path d="M14,4.6 C18,1 24,1 27,4" fill="#ff6a00"/><circle cx="29.5" cy="8.8" r="1.6" fill="#111"/></symbol>
+        </defs>
+
+        <g id="aq-stand">
+          <rect x="56" y="428" width="528" height="16" rx="4" fill="#3a2a1e"/>
+          <rect x="70" y="444" width="500" height="64" rx="6" fill="url(#standG)"/>
+          <line x1="320" y1="452" x2="320" y2="500" stroke="rgba(255,255,255,.08)" stroke-width="2"/>
+          <circle cx="306" cy="476" r="3.2" fill="#d2c95c"/><circle cx="334" cy="476" r="3.2" fill="#d2c95c"/>
+        </g>
+
+        <g clip-path="url(#tankClip)">
+          <rect x="84" y="94" width="472" height="332" fill="rgba(120,180,200,.05)"/>
+          <g id="aq-water">
+            <rect x="84" y="118" width="472" height="310" fill="url(#waterG)"/>
+            <path class="wave" d="M-400,118 q30,-7 60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 L1280,134 L-400,134 Z" fill="#8ad8ee" opacity=".55"/>
+          </g>
+          <polygon id="aq-light" points="112,94 528,94 556,426 84,426" fill="url(#lightG)" opacity="0"/>
+          <g id="aq-plants">
+            <g class="plant">
+              <path d="M140,398 C132,340 120,290 128,214" stroke="#3a8f4f" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M146,398 C150,330 160,280 152,196" stroke="#4fae5f" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M134,398 C120,350 104,320 100,258" stroke="#2f7a43" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M152,398 C168,350 180,320 186,266" stroke="#5cbf6a" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M143,398 C142,330 140,280 144,176" stroke="#45a058" stroke-width="6" fill="none" stroke-linecap="round"/>
+            </g>
+            <g class="plant">
+              <path d="M500,396 C496,340 490,300 498,232" stroke="#d0703f" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M508,396 C514,346 522,300 516,246" stroke="#e08a4a" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M492,396 C480,350 470,320 468,276" stroke="#c45f37" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M514,396 C530,360 540,330 546,296" stroke="#e9a352" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M504,396 C504,350 506,320 504,280" stroke="#b9553a" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </g>
+            <g class="plant">
+              <path d="M360,402 C358,388 356,380 358,368 M368,402 C368,390 370,382 374,372 M376,402 C378,392 382,386 388,378 M352,402 C348,392 344,386 340,380 M384,402 C388,394 394,390 400,386 M344,402 C340,396 334,392 328,390" stroke="#6fc35a" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M420,404 C420,394 418,388 420,378 M428,404 C430,394 434,388 438,382 M412,404 C408,396 404,392 400,388" stroke="#8fd16a" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </g>
+            <g class="plant">
+              <path d="M236,404 C234,370 230,350 236,320 M244,404 C248,372 254,352 252,326 M228,404 C220,380 214,366 212,346" stroke="#3d9a50" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </g>
+          </g>
+          <g id="aq-wood">
+            <path d="M262,404 C282,362 306,332 336,302 C356,282 376,264 396,242" stroke="#6e4528" stroke-width="13" fill="none" stroke-linecap="round"/>
+            <path d="M266,396 C286,358 310,330 338,302" stroke="#9a6a42" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+            <path d="M324,314 C342,302 358,298 378,302" stroke="#6e4528" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M306,336 C294,318 288,300 290,278" stroke="#6e4528" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <ellipse cx="396" cy="240" rx="17" ry="8" fill="#2f7a43" transform="rotate(-30 396 240)"/>
+            <ellipse cx="384" cy="252" rx="15" ry="7" fill="#3f8a48" transform="rotate(20 384 252)"/>
+            <ellipse cx="378" cy="300" rx="14" ry="7" fill="#2f7a43" transform="rotate(-15 378 300)"/>
+            <ellipse cx="290" cy="276" rx="13" ry="6.5" fill="#3f8a48" transform="rotate(-70 290 276)"/>
+          </g>
+          <g id="aq-rocks">
+            <g><path d="M108,402 L126,352 L160,334 L198,348 L216,394 L206,406 Z" fill="url(#rockG)"/><path d="M126,352 L160,334 L170,360 L140,372 Z" fill="#b8c2c6" opacity=".35"/></g>
+            <g><path d="M448,400 L466,360 L500,344 L532,362 L550,400 Z" fill="url(#rockG)"/><path d="M466,360 L500,344 L506,368 L478,376 Z" fill="#b8c2c6" opacity=".35"/></g>
+            <g><path d="M198,406 L210,382 L236,376 L252,404 Z" fill="url(#rock2G)"/></g>
+            <g><path d="M404,406 L414,388 L434,386 L446,406 Z" fill="url(#rock2G)"/></g>
+          </g>
+          <g id="aq-substrate">
+            <path d="M84,394 C150,382 220,400 300,390 C380,380 460,398 556,386 L556,428 L84,428 Z" fill="url(#sandG)"/>
+            <circle cx="199.5" cy="413.6" r="2.4" fill="#7a6240"/><circle cx="308.1" cy="414.5" r="3.0" fill="#b39463"/><circle cx="209.3" cy="405.9" r="4.0" fill="#b39463"/><circle cx="338.8" cy="413.7" r="2.5" fill="#8f7346"/><circle cx="196.7" cy="403.8" r="3.8" fill="#b39463"/><circle cx="431.0" cy="416.8" r="1.7" fill="#7a6240"/><circle cx="109.7" cy="419.5" r="3.6" fill="#efe0b5"/><circle cx="307.5" cy="418.0" r="3.7" fill="#b39463"/><circle cx="271.7" cy="420.0" r="2.6" fill="#8f7346"/><circle cx="494.3" cy="402.4" r="1.8" fill="#8f7346"/><circle cx="208.7" cy="416.8" r="3.4" fill="#efe0b5"/><circle cx="283.7" cy="420.8" r="2.9" fill="#7a6240"/><circle cx="359.1" cy="414.6" r="3.8" fill="#c9ae78"/><circle cx="483.9" cy="424.8" r="3.2" fill="#8f7346"/><circle cx="411.4" cy="408.2" r="2.9" fill="#7a6240"/><circle cx="351.8" cy="417.8" r="2.0" fill="#7a6240"/><circle cx="212.9" cy="403.1" r="2.7" fill="#b39463"/><circle cx="130.7" cy="420.0" r="2.5" fill="#8f7346"/><circle cx="99.3" cy="410.7" r="2.5" fill="#c9ae78"/><circle cx="110.3" cy="415.4" r="1.6" fill="#7a6240"/><circle cx="242.2" cy="422.0" r="4.0" fill="#7a6240"/><circle cx="198.5" cy="400.9" r="1.5" fill="#c9ae78"/><circle cx="365.9" cy="400.8" r="2.0" fill="#b39463"/><circle cx="224.1" cy="406.6" r="3.2" fill="#efe0b5"/><circle cx="234.4" cy="424.0" r="3.7" fill="#b39463"/><circle cx="263.3" cy="421.7" r="2.5" fill="#7a6240"/><circle cx="403.2" cy="402.6" r="3.9" fill="#7a6240"/><circle cx="214.8" cy="415.9" r="3.3" fill="#efe0b5"/><circle cx="291.2" cy="406.5" r="2.3" fill="#efe0b5"/><circle cx="95.3" cy="410.4" r="2.9" fill="#c9ae78"/><circle cx="263.2" cy="414.7" r="1.8" fill="#efe0b5"/><circle cx="304.5" cy="417.0" r="2.4" fill="#efe0b5"/><circle cx="429.5" cy="400.6" r="1.7" fill="#c9ae78"/><circle cx="533.1" cy="406.3" r="2.6" fill="#7a6240"/><circle cx="366.7" cy="404.4" r="2.0" fill="#efe0b5"/><circle cx="478.2" cy="406.6" r="3.5" fill="#c9ae78"/><circle cx="445.2" cy="400.7" r="2.9" fill="#8f7346"/><circle cx="232.6" cy="405.6" r="3.5" fill="#8f7346"/><circle cx="240.8" cy="417.0" r="3.1" fill="#c9ae78"/><circle cx="136.8" cy="408.0" r="2.3" fill="#8f7346"/><circle cx="291.7" cy="421.4" r="1.9" fill="#efe0b5"/><circle cx="431.4" cy="405.5" r="2.9" fill="#efe0b5"/><circle cx="193.5" cy="403.0" r="2.8" fill="#8f7346"/><circle cx="235.0" cy="420.9" r="2.9" fill="#efe0b5"/><circle cx="246.5" cy="420.7" r="1.7" fill="#7a6240"/><circle cx="248.8" cy="403.2" r="2.2" fill="#efe0b5"/><circle cx="303.8" cy="415.9" r="2.2" fill="#7a6240"/><circle cx="278.4" cy="423.0" r="1.9" fill="#c9ae78"/><circle cx="309.6" cy="420.8" r="3.1" fill="#7a6240"/><circle cx="289.8" cy="423.8" r="3.8" fill="#8f7346"/><circle cx="104.9" cy="411.4" r="3.4" fill="#7a6240"/><circle cx="533.1" cy="413.6" r="3.7" fill="#c9ae78"/><circle cx="484.7" cy="424.3" r="1.8" fill="#8f7346"/><circle cx="110.7" cy="422.6" r="3.2" fill="#8f7346"/><circle cx="502.4" cy="422.5" r="2.9" fill="#c9ae78"/><circle cx="311.3" cy="403.0" r="2.8" fill="#8f7346"/><circle cx="394.9" cy="413.1" r="2.5" fill="#7a6240"/><circle cx="142.3" cy="403.1" r="3.9" fill="#7a6240"/><circle cx="309.5" cy="419.6" r="2.4" fill="#8f7346"/><circle cx="146.2" cy="422.2" r="1.8" fill="#8f7346"/>
+          </g>
+          <g id="aq-fish">
+            <g class="fish" data-from="-420"><g class="bob"><use href="#tetra" x="290" y="160" width="36" height="15"/></g></g>
+            <g class="fish" data-from="-460"><g class="bob"><use href="#tetra" x="324" y="176" width="34" height="14"/></g></g>
+            <g class="fish" data-from="-440"><g class="bob"><use href="#tetra" x="306" y="196" width="34" height="14"/></g></g>
+            <g class="fish" data-from="-480"><g class="bob"><use href="#tetra" x="346" y="158" width="32" height="13"/></g></g>
+            <g class="fish" data-from="-500"><g class="bob"><use href="#tetra" x="352" y="194" width="34" height="14"/></g></g>
+            <g class="fish" data-from="420"><g class="bob"><g transform="translate(470,206) scale(-1,1)"><use href="#angel" x="0" y="0" width="58" height="62"/></g></g></g>
+            <g class="fish" data-from="-380"><g class="bob"><use href="#platy" x="176" y="250" width="38" height="20"/></g></g>
+            <g class="fish" data-from="400"><g class="bob"><g transform="translate(280,306) scale(-1,1)"><use href="#platy" x="0" y="0" width="34" height="18"/></g></g></g>
+          </g>
+          <g id="aq-bubbles" opacity="0">
+            <rect x="516" y="404" width="16" height="8" rx="3" fill="#59646b"/>
+            <circle class="bubble" cx="524" cy="398" r="4" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5"/>
+            <circle class="bubble" cx="520" cy="398" r="2.6" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.3" style="animation-delay:-.9s"/>
+            <circle class="bubble" cx="528" cy="398" r="3.3" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.3" style="animation-delay:-1.9s"/>
+            <circle class="bubble" cx="522" cy="398" r="2.2" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.2" style="animation-delay:-2.7s"/>
+            <circle class="bubble" cx="526" cy="398" r="5" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.4" style="animation-delay:-3.5s"/>
+          </g>
+        </g>
+
+        <g id="aq-glass">
+          <rect class="glass-outline" x="82" y="92" width="476" height="336" rx="8" fill="url(#glassG)" stroke="rgba(214,238,255,.55)" stroke-width="3"/>
+          <path d="M104,110 L150,110 L104,210 Z" fill="rgba(255,255,255,.06)"/>
+        </g>
+        <g id="aq-lid">
+          <rect x="74" y="70" width="492" height="22" rx="6" fill="#18201c" stroke="rgba(255,255,255,.12)"/>
+          <rect class="led" x="96" y="87" width="448" height="4" rx="2" fill="#2a332e"/>
+          <text x="320" y="85" text-anchor="middle" font-family="Lilita One, sans-serif" font-size="10" letter-spacing="3" fill="#d2c95c" opacity=".85">GALPÃO ANIMAL</text>
+        </g>
+      </svg>
+      <div class="aq-caption" aria-live="polite">
+        <div class="aq-bars"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="aq-body">
+          <div class="aq-num">↓</div>
+          <div class="aq-text"><strong class="scroll-hint"><i class="mouse"></i>Role para montar o aquário</strong><span>Do substrato aos peixes, do jeito que o nosso setor de Aquarismo faz.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track"><div class="group"><span>Aquarismo</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Aves</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Répteis</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Furões</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Ouriços</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Peixes ornamentais</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Terrários</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Rações e acessórios</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg></div><div class="group"><span>Aquarismo</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Aves</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Répteis</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Furões</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Ouriços</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Peixes ornamentais</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Terrários</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Rações e acessórios</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg></div></div>
+</div>
+
+<!-- SETORES -->
+<section class="light-sec section" id="setores">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <div><span class="eyebrow">Nossos setores</span><h2>Um mundo de bichos <em>não convencionais.</em></h2></div>
+      <p>Do aquário plantado ao furão, cada setor tem equipe especializada, produtos certos e animais saudáveis e legalizados.</p>
+    </div>
+    <div class="setores">
+      <a class="card card-big" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener" data-reveal>
+        <span class="tag">Atendimento exclusivo</span>
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M5 25c6-9 18-12 28-6l8-7v24l-8-7c-10 6-22 3-28-4z"/><circle cx="14" cy="22.5" r="1.4" fill="currentColor"/></svg></div>
+        <h3>Aquarismo</h3>
+        <p>Peixes ornamentais, de pequenos cardumes a aruanãs e arraias, plantas, aquários completos, filtros, iluminação e acessórios. Um setor inteiro só para quem ama o mundo aquático.</p>
+        <svg class="mini-fish" viewBox="0 0 260 120" aria-hidden="true"><use href="#tetra" x="10" y="20" width="70" height="28"/><use href="#tetra" x="70" y="56" width="60" height="24"/><use href="#tetra" x="130" y="18" width="64" height="26"/><use href="#platy" x="160" y="70" width="70" height="36"/></svg>
+        <span class="go">Falar com o Aquarismo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20aves." target="_blank" rel="noopener" data-reveal>
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M17 42c-7-6-8-17-2-23 4-4 11-4 14 1 3 4 1 10-3 13l7 9"/><path d="M23 17c-3-5-1-10 4-12M27 16c0-5 3-8 8-9"/><circle cx="26" cy="22" r="1.4" fill="currentColor"/><path d="M30 23l5 2-5 1.5"/></svg></div>
+        <h3>Aves</h3>
+        <p>Calopsitas, papagaios, araras e outras aves mansas e legalizadas, com gaiolas, rações e acessórios.</p>
+        <span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20r%C3%A9pteis%20e%20terr%C3%A1rios." target="_blank" rel="noopener" data-reveal>
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M8 38c8 5 26 5 30-2 3-6-6-9-14-9s-14-3-12-9 12-8 20-5"/><path d="M32 13c3-2 7-1 8 2-1 3-5 4-8 2"/><circle cx="36.5" cy="14.5" r="1" fill="currentColor"/></svg></div>
+        <h3>Répteis</h3>
+        <p>Serpentes, lagartos e quelônios, com terrários, iluminação e tudo para montar o habitat completo.</p>
+        <span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20pequenos%20ex%C3%B3ticos%20%28fur%C3%B5es%2C%20ouri%C3%A7os...%29." target="_blank" rel="noopener" data-reveal>
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M7 34c0-10 8-18 18-18 9 0 15 6 16 13l3 2-3 3H7z"/><path d="M12 24l-4-4M16 20l-2-5M22 17l0-5M28 17l3-4M34 20l4-3"/><circle cx="36" cy="27" r="1.3" fill="currentColor"/><path d="M14 34v4M30 34v4"/></svg></div>
+        <h3>Pequenos exóticos</h3>
+        <p>Furões, ouriços e outros pets não convencionais, com orientação sobre manejo, alimentação e cuidados.</p>
+        <span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20de%20ra%C3%A7%C3%B5es/acess%C3%B3rios." target="_blank" rel="noopener" data-reveal>
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M5 26h38c-1 9-8 14-19 14S6 35 5 26z"/><circle cx="17" cy="20" r="3"/><circle cx="25" cy="17.5" r="3"/><circle cx="32" cy="21" r="2.6"/></svg></div>
+        <h3>Rações e acessórios</h3>
+        <p>Alimentação específica, suplementos, gaiolas e equipamentos. Retire na loja ou receba em casa.</p>
+        <span class="go">Fazer pedido <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TERRÁRIO -->
+<section class="terra" id="terrarios">
+  <div class="container terra-inner">
+    <div class="terra-copy">
+      <span class="eyebrow" data-reveal>Répteis &amp; terrários</span>
+      <h2 data-reveal>Cada detalhe do habitat, <em>do jeito certo.</em></h2>
+      <p data-reveal>Répteis precisam de temperatura, luz e abrigo corretos para viver bem. A nossa equipe ajuda você a escolher o animal e a montar o terrário completo, item por item, para a espécie certa.</p>
+      <ul class="checks" data-reveal>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Montagem completa do terrário</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Iluminação UVB e aquecimento na medida</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Animais legalizados, com orientação de manejo</li>
+      </ul>
+      <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20r%C3%A9pteis%20e%20terr%C3%A1rios." target="_blank" rel="noopener" data-reveal><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Montar meu terrário</a>
+    </div>
+    <div class="terra-stage">
+      <div class="stage-title">Role e veja por dentro <em>↓</em></div>
+      <svg id="terra" viewBox="0 0 600 900" role="img" aria-label="Terrário em vista explodida: tampa com iluminação, galhos e plantas, réptil, toca, substrato e terrário de vidro">
+<defs>
+<pattern id="tMesh" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0,0 L7,7 M7,0 L0,7" stroke="rgba(255,255,255,.16)" stroke-width="1"/></pattern>
+<radialGradient id="tWarm"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+<linearGradient id="tSand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4b076"/><stop offset="1" stop-color="#b38c55"/></linearGradient>
+</defs>
+<g id="terra-rig">
+<g id="t-glass-back">
+<polygon points="35.0,820.0 175.0,750.0 315.0,820.0 175.0,890.0" fill="rgba(160,210,230,.08)" stroke="rgba(215,240,255,.25)" stroke-width="1.5"/>
+<polygon points="35.0,700.0 175.0,630.0 175.0,750.0 35.0,820.0" fill="rgba(160,210,230,.05)" stroke="rgba(215,240,255,.22)" stroke-width="1.5"/>
+<polygon points="175.0,630.0 315.0,700.0 315.0,820.0 175.0,750.0" fill="rgba(160,210,230,.05)" stroke="rgba(215,240,255,.22)" stroke-width="1.5"/>
+</g>
+<g class="part" id="t-sub" data-asm="256">
+<polygon points="41.0,540.0 175.0,607.0 175.0,631.0 41.0,564.0" fill="#8a683a"/>
+<polygon points="175.0,607.0 309.0,540.0 309.0,564.0 175.0,631.0" fill="#735630"/>
+<polyline points="41.0,549.0 175.0,616.0 309.0,549.0" fill="none" stroke="#5e4526" stroke-width="3" opacity=".7"/>
+<polygon points="175.0,473.0 309.0,540.0 175.0,607.0 41.0,540.0" fill="url(#tSand)"/>
+<circle cx="182.3" cy="529.7" r="1.9" fill="#8f6d3e"/><circle cx="232.0" cy="542.1" r="1.9" fill="#d9bb84"/><circle cx="125.3" cy="520.1" r="2.1" fill="#a5824f"/><circle cx="137.7" cy="498.6" r="1.7" fill="#8f6d3e"/><circle cx="164.5" cy="560.1" r="2.0" fill="#8f6d3e"/><circle cx="207.9" cy="530.8" r="1.7" fill="#efdcae"/><circle cx="244.7" cy="515.2" r="2.5" fill="#efdcae"/><circle cx="164.5" cy="505.8" r="2.0" fill="#8f6d3e"/><circle cx="190.8" cy="589.6" r="1.4" fill="#8f6d3e"/><circle cx="268.7" cy="544.0" r="1.7" fill="#8f6d3e"/><circle cx="237.6" cy="548.6" r="1.3" fill="#8f6d3e"/><circle cx="167.9" cy="504.6" r="1.7" fill="#8f6d3e"/><circle cx="192.2" cy="561.3" r="1.7" fill="#8f6d3e"/><circle cx="170.2" cy="566.3" r="1.6" fill="#a5824f"/><circle cx="246.7" cy="541.5" r="2.2" fill="#8f6d3e"/><circle cx="189.3" cy="546.7" r="2.4" fill="#d9bb84"/><circle cx="206.1" cy="574.0" r="1.8" fill="#a5824f"/><circle cx="141.6" cy="504.5" r="2.5" fill="#d9bb84"/><circle cx="152.3" cy="549.2" r="2.0" fill="#efdcae"/><circle cx="82.9" cy="526.7" r="2.4" fill="#d9bb84"/><circle cx="286.7" cy="542.3" r="1.8" fill="#d9bb84"/><circle cx="80.3" cy="542.1" r="2.5" fill="#a5824f"/><circle cx="200.5" cy="551.3" r="2.6" fill="#d9bb84"/><circle cx="123.3" cy="508.9" r="2.3" fill="#d9bb84"/><circle cx="169.5" cy="553.3" r="1.9" fill="#8f6d3e"/><circle cx="170.0" cy="569.6" r="2.4" fill="#efdcae"/><circle cx="162.2" cy="571.4" r="1.7" fill="#8f6d3e"/><circle cx="130.7" cy="531.5" r="1.9" fill="#d9bb84"/><circle cx="213.7" cy="572.5" r="1.9" fill="#d9bb84"/><circle cx="186.9" cy="489.0" r="1.6" fill="#efdcae"/><circle cx="120.2" cy="563.6" r="2.1" fill="#a5824f"/><circle cx="131.7" cy="548.9" r="1.9" fill="#efdcae"/><circle cx="177.3" cy="481.0" r="1.6" fill="#d9bb84"/><circle cx="214.1" cy="570.8" r="1.4" fill="#a5824f"/><circle cx="234.1" cy="553.1" r="2.0" fill="#d9bb84"/><circle cx="163.7" cy="514.9" r="1.4" fill="#8f6d3e"/><circle cx="189.4" cy="550.2" r="1.7" fill="#8f6d3e"/><circle cx="112.2" cy="524.4" r="2.4" fill="#8f6d3e"/><circle cx="169.3" cy="509.3" r="2.2" fill="#a5824f"/><circle cx="161.1" cy="581.4" r="1.3" fill="#efdcae"/><circle cx="91.7" cy="528.8" r="2.2" fill="#d9bb84"/><circle cx="199.6" cy="492.6" r="1.8" fill="#d9bb84"/><circle cx="187.0" cy="495.8" r="1.5" fill="#a5824f"/><circle cx="140.1" cy="512.3" r="2.4" fill="#efdcae"/><circle cx="143.7" cy="547.0" r="2.0" fill="#efdcae"/><circle cx="170.7" cy="553.6" r="2.2" fill="#8f6d3e"/><circle cx="208.5" cy="499.7" r="2.3" fill="#d9bb84"/><circle cx="214.1" cy="532.5" r="2.0" fill="#d9bb84"/><circle cx="137.5" cy="504.3" r="1.3" fill="#8f6d3e"/><circle cx="158.1" cy="574.4" r="1.9" fill="#8f6d3e"/><circle cx="251.9" cy="527.7" r="2.4" fill="#d9bb84"/><circle cx="145.9" cy="536.4" r="1.3" fill="#efdcae"/><circle cx="96.8" cy="538.5" r="1.2" fill="#efdcae"/><circle cx="243.9" cy="526.8" r="1.5" fill="#8f6d3e"/><circle cx="233.9" cy="522.2" r="1.7" fill="#a5824f"/><circle cx="200.9" cy="503.0" r="1.2" fill="#d9bb84"/><circle cx="110.3" cy="522.5" r="2.4" fill="#d9bb84"/><circle cx="197.7" cy="540.5" r="2.1" fill="#d9bb84"/><circle cx="150.3" cy="567.3" r="1.3" fill="#efdcae"/><circle cx="105.7" cy="525.1" r="1.5" fill="#a5824f"/><circle cx="207.8" cy="519.4" r="1.4" fill="#8f6d3e"/><circle cx="171.9" cy="548.2" r="1.2" fill="#a5824f"/><circle cx="209.6" cy="519.2" r="1.3" fill="#efdcae"/><circle cx="168.8" cy="580.7" r="2.5" fill="#8f6d3e"/><circle cx="143.5" cy="573.7" r="2.1" fill="#efdcae"/><circle cx="145.5" cy="517.8" r="2.2" fill="#efdcae"/><circle cx="138.2" cy="528.6" r="1.5" fill="#efdcae"/><circle cx="176.9" cy="573.9" r="2.5" fill="#efdcae"/><circle cx="226.4" cy="561.5" r="1.6" fill="#8f6d3e"/><circle cx="161.6" cy="593.2" r="2.2" fill="#a5824f"/>
+<g class="label"><g transform="translate(0,544)">
+<line x1="313" y1="0" x2="344" y2="0" class="ll"/><circle cx="313" cy="0" r="4.5" class="ld"/>
+<text x="352" y="-2" class="lt">Substrato</text><text x="352" y="21" class="ls">Ideal para cada espécie</text></g></g>
+</g>
+<g class="part" id="t-hide" data-asm="295">
+<ellipse cx="125" cy="481" rx="44" ry="9" fill="rgba(0,0,0,.25)"/>
+<path d="M83,481 C83,426 167,426 167,481 Z" fill="#6b4428"/>
+<path d="M83,481 C83,452 95,436 112,431" fill="none" stroke="#8a5a36" stroke-width="5" stroke-linecap="round"/>
+<path d="M102,481 C102,452 148,452 148,481 Z" fill="#24160d"/>
+<path d="M120,437 C126,447 130,452 140,456 M146,440 C150,450 156,456 162,462" fill="none" stroke="#4e301b" stroke-width="2.5" stroke-linecap="round"/>
+<ellipse cx="150" cy="430" rx="9" ry="4" fill="#5aa862" transform="rotate(-20 150 430)"/>
+<ellipse cx="160" cy="434" rx="8" ry="3.5" fill="#3f8a48" transform="rotate(25 160 434)"/>
+<g class="label"><g transform="translate(0,462)">
+<line x1="170" y1="0" x2="344" y2="0" class="ll"/><circle cx="170" cy="0" r="4.5" class="ld"/>
+<text x="352" y="-2" class="lt">Toca</text><text x="352" y="21" class="ls">Abrigo e segurança</text></g></g>
+</g>
+<g class="part" id="t-branch" data-asm="466">
+<path d="M240,330 C236,300 232,282 236,256" fill="none" stroke="#3d8b4a" stroke-width="7" stroke-linecap="round"/>
+<path d="M247,330 C253,304 259,288 264,268" fill="none" stroke="#5aa862" stroke-width="6" stroke-linecap="round"/>
+<path d="M234,330 C222,310 216,296 213,280" fill="none" stroke="#2f7a43" stroke-width="6" stroke-linecap="round"/>
+<path d="M55,330 C110,300 180,262 265,215" fill="none" stroke="#7a4e2d" stroke-width="15" stroke-linecap="round"/>
+<path d="M62,322 C116,294 182,258 258,216" fill="none" stroke="#a06d44" stroke-width="3.5" stroke-linecap="round" opacity=".8"/>
+<path d="M170,272 C182,246 196,232 214,222" fill="none" stroke="#6b4428" stroke-width="8" stroke-linecap="round"/>
+<path d="M120,302 C112,282 114,266 124,252" fill="none" stroke="#6b4428" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="214" cy="220" rx="13" ry="8" fill="#4c9a52" transform="rotate(-35 214 220)"/><ellipse cx="228" cy="232" rx="12" ry="7" fill="#62b36a" transform="rotate(20 228 232)"/><ellipse cx="124" cy="250" rx="11" ry="7" fill="#4c9a52" transform="rotate(-60 124 250)"/><ellipse cx="136" cy="262" rx="10" ry="6" fill="#62b36a" transform="rotate(15 136 262)"/><ellipse cx="252" cy="208" rx="12" ry="7" fill="#3f8a48" transform="rotate(-20 252 208)"/><ellipse cx="190" cy="250" rx="11" ry="7" fill="#5aa862" transform="rotate(40 190 250)"/><ellipse cx="98" cy="314" rx="10" ry="6" fill="#3f8a48" transform="rotate(-30 98 314)"/><ellipse cx="160" cy="282" rx="9" ry="5.5" fill="#62b36a" transform="rotate(-50 160 282)"/>
+<g class="label"><g transform="translate(0,248)">
+<line x1="272" y1="0" x2="344" y2="0" class="ll"/><circle cx="272" cy="0" r="4.5" class="ld"/>
+<text x="352" y="-2" class="lt">Galhos e plantas</text><text x="352" y="21" class="ls">Escalada e enriquecimento</text></g></g>
+</g>
+<g class="part" id="t-gecko" data-asm="405">
+<ellipse cx="225" cy="411" rx="70" ry="7" fill="rgba(0,0,0,.25)"/>
+<g transform="translate(150,364)">
+<path d="M84,30 L80,42 L73,45" fill="none" stroke="#d29b2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54,30 L58,42 L65,45" fill="none" stroke="#d29b2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g class="g-tail"><path d="M94,20 C116,22 132,18 142,6 C146,0 152,4 148,10 C138,26 118,32 94,32 Z" fill="#f2c14e"/><circle cx="110" cy="24" r="2.0" fill="#3a2a17"/><circle cx="122" cy="21" r="1.9" fill="#3a2a17"/><circle cx="133" cy="15" r="1.7" fill="#3a2a17"/><circle cx="116" cy="18" r="1.4" fill="#3a2a17"/></g>
+<ellipse cx="70" cy="26" rx="33" ry="12.5" fill="#f2c14e"/>
+<path d="M44,31 C58,38 86,38 100,28 L100,31 C86,41 58,41 44,34 Z" fill="#f8e4a6"/>
+<path d="M46,19 C36,12 16,14 9,23 C13,32 32,35 47,31 Z" fill="#f2c14e"/>
+<path d="M10,25 C16,27.5 24,28 31,26.5" fill="none" stroke="#a87a26" stroke-width="1.3" stroke-linecap="round"/>
+<circle cx="20" cy="21.5" r="3.4" fill="#1d1b17"/><circle cx="21.2" cy="20.4" r="1.1" fill="#fff"/>
+<circle cx="60" cy="20" r="2.3" fill="#3a2a17"/><circle cx="72" cy="16" r="2.0" fill="#3a2a17"/><circle cx="84" cy="22" r="2.5" fill="#3a2a17"/><circle cx="66" cy="29" r="1.6" fill="#3a2a17"/><circle cx="52" cy="24" r="1.9" fill="#3a2a17"/><circle cx="94" cy="18" r="1.8" fill="#3a2a17"/><circle cx="30" cy="19" r="1.6" fill="#3a2a17"/><circle cx="38" cy="26" r="1.4" fill="#3a2a17"/><circle cx="78" cy="30" r="1.5" fill="#3a2a17"/>
+<path d="M48,32 L42,44 L35,46" fill="none" stroke="#f2c14e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90,32 L96,44 L103,46" fill="none" stroke="#f2c14e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g class="label"><g transform="translate(0,385)">
+<line x1="304" y1="0" x2="344" y2="0" class="ll"/><circle cx="304" cy="0" r="4.5" class="ld"/>
+<text x="352" y="-2" class="lt">Seu réptil</text><text x="352" y="21" class="ls">Legalizado e saudável</text></g></g>
+</g>
+<g id="t-glass-front">
+<polygon points="35.0,700.0 175.0,770.0 175.0,890.0 35.0,820.0" fill="rgba(190,230,250,.07)" stroke="rgba(215,240,255,.55)" stroke-width="2"/>
+<polygon points="175.0,770.0 315.0,700.0 315.0,820.0 175.0,890.0" fill="rgba(190,230,250,.05)" stroke="rgba(215,240,255,.55)" stroke-width="2"/>
+<polygon points="35.0,700.0 175.0,630.0 315.0,700.0 175.0,770.0" fill="none" stroke="rgba(215,240,255,.6)" stroke-width="2"/>
+<polyline points="35.0,820.0 175.0,890.0 315.0,820.0" fill="none" stroke="#28302b" stroke-width="6" stroke-linejoin="round"/>
+<line x1="175" y1="770" x2="175" y2="890" stroke="#28302b" stroke-width="4"/>
+<line x1="35" y1="700" x2="35" y2="820" stroke="#28302b" stroke-width="4"/>
+<line x1="315" y1="700" x2="315" y2="820" stroke="#28302b" stroke-width="4"/>
+<path d="M60,725 L95,742 L95,800 L60,783 Z" fill="rgba(255,255,255,.06)"/>
+<g class="vent"><line x1="205" y1="767.0" x2="205" y2="781.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/><line x1="219" y1="760.0" x2="219" y2="774.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/><line x1="233" y1="753.0" x2="233" y2="767.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/><line x1="247" y1="746.0" x2="247" y2="760.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/><line x1="261" y1="739.0" x2="261" y2="753.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/><line x1="275" y1="732.0" x2="275" y2="746.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/><line x1="289" y1="725.0" x2="289" y2="739.0" stroke="rgba(215,240,255,.35)" stroke-width="3" stroke-linecap="round"/></g>
+<g class="label"><g transform="translate(0,790)">
+<line x1="320" y1="0" x2="344" y2="0" class="ll"/><circle cx="320" cy="0" r="4.5" class="ld"/>
+<text x="352" y="-2" class="lt">Terrário de vidro</text><text x="352" y="21" class="ls">Ventilação e visibilidade</text></g></g>
+</g>
+<g class="part" id="t-lid" data-asm="580">
+<ellipse class="lamp-light" cx="190" cy="240" rx="120" ry="95" fill="url(#tWarm)"/>
+<polygon points="29.0,110.0 175.0,183.0 175.0,193.0 29.0,120.0" fill="#1a201c"/>
+<polygon points="175.0,183.0 321.0,110.0 321.0,120.0 175.0,193.0" fill="#131815"/>
+<polygon points="175.0,37.0 321.0,110.0 175.0,183.0 29.0,110.0" fill="#262d29" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/>
+<polygon points="175.0,37.0 321.0,110.0 175.0,183.0 29.0,110.0" fill="url(#tMesh)"/>
+<line x1="110" y1="100" x2="208" y2="149" stroke="#9fd6ff" stroke-width="18" stroke-linecap="round" class="glow" opacity=".35"/>
+<line x1="110" y1="100" x2="208" y2="149" stroke="#eef8ff" stroke-width="7" stroke-linecap="round"/>
+<circle cx="110" cy="100" r="5" fill="#6d7570"/><circle cx="208" cy="149" r="5" fill="#6d7570"/>
+<ellipse cx="240" cy="104" rx="27" ry="13" fill="#1c211e"/>
+<path d="M213,104 C213,68 267,68 267,104 Z" fill="#3a423d"/>
+<path d="M221,97 C223,82 237,75 250,77" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3" stroke-linecap="round"/>
+<rect x="234" y="62" width="12" height="10" rx="3" fill="#2a302c"/>
+<g class="label"><g transform="translate(0,110)">
+<line x1="327" y1="0" x2="344" y2="0" class="ll"/><circle cx="327" cy="0" r="4.5" class="ld"/>
+<text x="352" y="-2" class="lt">Iluminação</text><text x="352" y="21" class="ls">UVB + aquecimento</text></g></g>
+</g>
+</g>
+</svg>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="numbers section" id="sobre">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <div><span class="eyebrow">Por que a Galpão Animal</span><h2>Mais de três décadas fazendo <em>história.</em></h2></div>
+      <p>Pioneira no Brasil em pets não convencionais, a Galpão Animal virou ponto de encontro de quem ama a natureza em São Paulo.</p>
+    </div>
+    <div class="nums">
+      <div class="num" data-reveal><div class="big">+<span class="count" data-to="30">30</span></div><p>anos de história com aquarismo, aves, répteis e exóticos</p></div>
+      <div class="num" data-reveal><div class="big"><span class="count" data-to="4.6" data-dec="1">4,6</span><small>★</small></div><p>de nota no Google, com mais de 2.600 avaliações</p></div>
+      <div class="num" data-reveal><div class="big"><span class="count" data-to="133">133</span><small>mil</small></div><p>seguidores acompanhando a loja no Instagram</p></div>
+      <div class="num" data-reveal><div class="big"><span class="count" data-to="100">100</span><small>%</small></div><p>dos animais totalmente legalizados</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOJA VIRTUAL -->
+<section class="light-sec section" id="visite">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <div><span class="eyebrow">Visite a loja</span><h2>Um passeio pela natureza <em>no meio de São Paulo.</em></h2></div>
+      <p>Na Vila Leopoldina, pertinho do Ceagesp. Venha ver de perto, tirar dúvidas com a equipe e conhecer cada setor.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-card" data-reveal>
+        <div class="visit-photo">
+          <img src="https://galpaoanimal.com.br/wp-content/uploads/2024/07/2023-01-21.jpg" alt="Fachada da loja Galpão Animal" loading="lazy" onerror="this.remove()">
+          <div class="logo-badge"><img src="https://galpaoanimal.com.br/wp-content/uploads/2022/01/Logo-Verde-png.png" alt="Logo Galpão Animal" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="visit-info">
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Endereço</strong><span>Rua Baumann, 1363 – Vila Leopoldina<br>São Paulo – SP, 05318-000</span></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6.5V12l3.5 2"/></svg><div><strong>Horário</strong><span>Segunda a sábado, das 10h às 18h<br>Domingo, das 10h às 13h</span></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 006.5 6.5L16 13.5l5 2V19a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg><div><strong>Telefones</strong><a href="tel:+551138370581">(11) 3837-0581</a> · <a href="tel:+551136410337">Aquarismo (11) 3641-0337</a></div></div>
+          <div class="ctas">
+            <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Galp%C3%A3o+Animal+Rua+Baumann+1363+S%C3%A3o+Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
+            <a class="btn btn-line" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="map" data-reveal>
+        <iframe title="Mapa: Galpão Animal, Rua Baumann 1363, Vila Leopoldina" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Galp%C3%A3o+Animal,+Rua+Baumann,+1363,+Vila+Leopoldina,+S%C3%A3o+Paulo&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band-wrap">
+  <div class="container">
+    <div class="band" data-reveal>
+      <svg class="paw" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg>
+      <div>
+        <h2>Nossa loja virtual está voltando.</h2>
+        <p>Enquanto isso, a gente atende pelo WhatsApp: tire dúvidas, faça seu pedido e escolha entre retirar na loja ou receber em casa.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-dark" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp principal</a>
+        <a class="btn btn-line" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp Aquarismo</a>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <div class="logo-sq"><img src="https://galpaoanimal.com.br/wp-content/uploads/2022/01/Logo-Verde-png.png" alt="Galpão Animal" loading="lazy" onerror="this.parentNode.remove()"></div>
+        <div class="slogan">Lugar de bicho legal!</div>
+        <p style="margin:10px 0 0;max-width:300px;line-height:1.6">Aquarismo, aves, répteis e exóticos há mais de 30 anos. Totalmente legalizados.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 98136-0703</a></li>
+          <li><a href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener">Aquarismo (11) 97256-1106</a></li>
+          <li><a href="tel:+551138370581">(11) 3837-0581</a></li>
+          <li><a href="mailto:galpaoanimal@galpaoanimal.com.br">galpaoanimal@galpaoanimal.com.br</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Loja</h4>
+        <ul>
+          <li>Rua Baumann, 1363</li>
+          <li>Vila Leopoldina – São Paulo/SP</li>
+          <li>Seg a sáb: 10h às 18h</li>
+          <li>Dom: 10h às 13h</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/galpaoanimal/" target="_blank" rel="noopener">Instagram @galpaoanimal</a></li>
+          <li><a href="https://www.tiktok.com/@galpaoanimal" target="_blank" rel="noopener">TikTok @galpaoanimal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Galpão Animal. Todos os direitos reservados.</span>
+      <a class="kodra" href="https://kodratecnologia.com.br" target="_blank" rel="noopener">Prévia desenvolvida por <b>Kodra</b> ↗</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  if(!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var WA_AQUA = 'https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo.';
+
+  /* smooth scroll */
+  var lenis = null;
+  if(!reduce && window.Lenis){
+    lenis = new Lenis({lerp:0.1, smoothWheel:true});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t*1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href'); if(id.length < 2) return;
+      var el = document.querySelector(id); if(!el) return;
+      e.preventDefault();
+      if(lenis) lenis.scrollTo(el, {offset:-10, duration:1.4});
+      else el.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  /* captions do aquário */
+  var STEPS = [
+    {t:0,   n:'01', title:'Substrato fértil',          text:'A base certa para raízes fortes e água equilibrada.'},
+    {t:1.2, n:'02', title:'Rochas e troncos',           text:'O hardscape cria abrigo e território para os peixes.'},
+    {t:2.6, n:'03', title:'Plantas naturais',           text:'Oxigenação, filtragem natural e um visual vivo.'},
+    {t:4.0, n:'04', title:'Água tratada e iluminação',  text:'Parâmetros corretos e luz no ponto para o ecossistema.'},
+    {t:5.6, n:'05', title:'Peixes saudáveis',           text:'De pequenos cardumes a aruanãs e arraias, todos legalizados.'},
+    {t:7.0, n:'✓',  title:'Seu aquário, do jeito certo', text:'Quer um assim? <a href="'+WA_AQUA+'" target="_blank" rel="noopener">Fale com o nosso Aquarismo →</a>'}
+  ];
+  var capNum = document.querySelector('.aq-num'), capText = document.querySelector('.aq-text');
+  var bars = document.querySelectorAll('.aq-bars span');
+  var intro = capText.innerHTML, introNum = capNum.textContent, cur = -2;
+  function renderCaption(i){
+    if(i === cur) return; cur = i;
+    var html = i < 0 ? intro : '<strong>'+STEPS[i].title+'</strong><span>'+STEPS[i].text+'</span>';
+    var num = i < 0 ? introNum : STEPS[i].n;
+    bars.forEach(function(b,k){ b.classList.toggle('on', i >= 0 && k <= Math.min(i,4)); });
+    gsap.to([capNum, capText], {opacity:0, y:-6, duration:.15, overwrite:true, onComplete:function(){
+      capNum.textContent = num; capText.innerHTML = html;
+      gsap.fromTo([capNum, capText], {opacity:0, y:6}, {opacity:1, y:0, duration:.25});
+    }});
+  }
+
+  function buildAquarium(trigger, end){
+    var tl = gsap.timeline({
+      defaults:{ease:'power3.out'},
+      scrollTrigger:{trigger:trigger, start:'top top', end:end, scrub:0.8, pin:true, anticipatePin:1},
+      onUpdate:function(){
+        var time = tl.time(), idx = -1;
+        if(tl.progress() > 0.015){ STEPS.forEach(function(s,i){ if(time >= s.t + .25) idx = i; }); }
+        renderCaption(idx);
+      }
+    });
+    tl.from('#aq-substrate', {y:-340, opacity:0, duration:1})
+      .from('#aq-rocks > g', {y:-320, opacity:0, rotation:function(){ return gsap.utils.random(-25,25); }, transformOrigin:'50% 100%', duration:1, stagger:.15}, 1.2)
+      .from('#aq-wood', {y:-300, rotation:-12, opacity:0, transformOrigin:'50% 100%', duration:1}, 1.5)
+      .from('#aq-plants .plant', {scaleY:0, opacity:0, transformOrigin:'50% 100%', duration:1.2, stagger:.14}, 2.6)
+      .from('#aq-water', {scaleY:0, transformOrigin:'50% 100%', ease:'power2.inOut', duration:1.4}, 4.0)
+      .to('#aq-light', {opacity:1, duration:.5}, 5.0)
+      .to('#aquarium .led', {fill:'#fff3c4', duration:.5}, 5.0)
+      .to('#aq-bubbles', {opacity:1, duration:.4}, 5.2)
+      .from('#aq-fish .fish', {x:function(i,el){ return +el.getAttribute('data-from'); }, opacity:0, ease:'power2.out', duration:1.4, stagger:.1}, 5.6)
+      .to({}, {duration:.9});
+    return tl;
+  }
+
+  function buildTerra(trigger, end){
+    var tl = gsap.timeline({scrollTrigger:{trigger:trigger, start:'top top', end:end, scrub:0.8, pin:true, anticipatePin:1}});
+    tl.fromTo('#terra-rig', {y:-300}, {y:0, ease:'power2.inOut', duration:2}, .4);
+    gsap.utils.toArray('#terra .part').forEach(function(p){
+      tl.fromTo(p, {y:+p.getAttribute('data-asm')}, {y:0, ease:'power2.inOut', duration:2}, .4);
+    });
+    tl.fromTo('#terra .lamp-light', {opacity:1}, {opacity:0, duration:.8}, .4)
+      .fromTo('#terra .label', {opacity:0, x:-14}, {opacity:1, x:0, duration:.5, stagger:.08}, 2.0)
+      .to({}, {duration:.8});
+    return tl;
+  }
+
+  var mm = gsap.matchMedia();
+  mm.add({desk:'(min-width: 901px)', mob:'(max-width: 900px)', reduce:'(prefers-reduced-motion: reduce)'}, function(ctx){
+    var c = ctx.conditions;
+    if(c.reduce){ renderCaption(5); return; }
+    buildAquarium(c.desk ? '.hero' : '.aqua-stage', c.desk ? '+=2400' : '+=1900');
+    buildTerra(c.desk ? '.terra' : '.terra-stage', c.desk ? '+=1800' : '+=1500');
+  });
+
+  if(reduce) return;
+
+  /* intro do hero */
+  gsap.from('.hero .reveal-line > span', {yPercent:110, duration:1.1, ease:'power4.out', stagger:.1, delay:.1});
+  gsap.from('.hero [data-fade]', {y:22, opacity:0, duration:.9, ease:'power3.out', stagger:.08, delay:.35});
+  gsap.from('.site-header .bar', {y:-30, opacity:0, duration:.9, ease:'power3.out', delay:.2});
+  var outline = document.querySelector('#aquarium .glass-outline');
+  if(outline && outline.getTotalLength){
+    var len = outline.getTotalLength();
+    gsap.fromTo(outline, {strokeDasharray:len, strokeDashoffset:len}, {strokeDashoffset:0, duration:1.8, ease:'power2.inOut', delay:.2});
+  }
+  gsap.from(['#aq-stand', '#aq-lid', '.aq-caption'], {opacity:0, y:24, duration:1, ease:'power3.out', stagger:.12, delay:.5});
+
+  /* folhas com parallax */
+  gsap.to('.leaf-a', {yPercent:-40, rotation:-8, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'+=2400', scrub:true}});
+  gsap.to('.leaf-b', {yPercent:30, rotation:170, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'+=2400', scrub:true}});
+
+  /* reveals */
+  gsap.utils.toArray('[data-reveal]').forEach(function(el){
+    gsap.from(el, {y:44, opacity:0, duration:1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%'}});
+  });
+
+  /* contadores */
+  gsap.utils.toArray('.count').forEach(function(el){
+    var to = parseFloat(el.getAttribute('data-to')), dec = +(el.getAttribute('data-dec') || 0), o = {v:0};
+    el.textContent = '0';
+    gsap.to(o, {v:to, duration:1.8, ease:'power2.out', scrollTrigger:{trigger:el, start:'top 90%'},
+      onUpdate:function(){ el.textContent = o.v.toLocaleString('pt-BR', {minimumFractionDigits:dec, maximumFractionDigits:dec}); }});
+  });
+
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+</body>
+</html>
