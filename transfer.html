@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>transfer</title>
+<body style="font:16px sans-serif;padding:20px">preparando imagens…
+<script>
+const W = 'https://wsrv.nl/?url=galpaoanimal.com.br/wp-content/uploads/';
+const IM = {
+  'jandaia.webp': '2022/05/Foto-Jandaia.png&cx=0&cy=0&cw=1080&ch=640&output=webp&q=80',
+  'papagaio.webp': '2022/05/foto-papagaio-verdadeiro.png&cx=0&cy=0&cw=800&ch=690&output=webp&q=80',
+  'arara-azul.webp': '2022/04/Banner-Arara-Azul-Mobile-1.png&cx=0&cy=0&cw=470&ch=600&output=webp&q=82',
+  'turaco.webp': '2022/04/Banner-Turaco-Home-Mobile.png&cx=430&cy=0&cw=470&ch=600&output=webp&q=82'
+};
+(async () => {
+  const files = [];
+  for (const [name, q] of Object.entries(IM)) {
+    const r = await fetch(W + q);
+    const b = await r.blob();
+    files.push({ name, type: b.type, blob: b });
+  }
+  if (window.opener) {
+    window.opener.postMessage({ kind: 'galpao-files', files }, 'https://github.com');
+    document.body.textContent = 'enviado: ' + files.length + ' imagens';
+    setTimeout(() => window.close(), 1500);
+  } else {
+    document.body.textContent = 'sem janela de origem';
+  }
+})();
+</script>
+</body>
