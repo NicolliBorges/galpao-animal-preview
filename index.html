@@ -3,98 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Galpão Animal — Lugar de bicho legal</title>
-<meta name="description" content="Galpão Animal: pioneira no Brasil em aquarismo, aves, répteis e animais exóticos. Há mais de 30 anos, totalmente legalizados. Rua Baumann, 1363 – Vila Leopoldina, São Paulo.">
+<title>Galpão Animal | Aquarismo, aves, répteis e exóticos em São Paulo</title>
+<meta name="description" content="A maior loja do Brasil especializada em aquarismo, animais exóticos e silvestres. Há mais de 30 anos na Vila Leopoldina, São Paulo. Animais totalmente legalizados.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="Galpão Animal — Lugar de bicho legal">
-<meta property="og:description" content="Aquarismo, aves, répteis e exóticos há mais de 30 anos em São Paulo.">
-<meta name="theme-color" content="#0f2219">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f2219'/%3E%3Cpath d='M12 33c7-10 20-13 31-6l8-7v26l-8-7c-11 7-24 4-31-6z' fill='%23d2c95c'/%3E%3C/svg%3E">
+<meta property="og:title" content="Galpão Animal | Lugar de bicho legal!">
+<meta property="og:description" content="Aquarismo, aves, répteis e exóticos há mais de 30 anos na Vila Leopoldina, São Paulo.">
+<meta property="og:image" content="img/fachada.webp">
+<meta name="theme-color" content="#33441f">
+<link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Lilita+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0a1610; --jungle:#0f2219; --jungle2:#16301f; --leaf:#2f6b3f;
-  --olive:#d2c95c; --olive2:#e9e28c; --cream:#f6f2e4; --cream2:#ece5cd;
-  --text:#14211a; --muted:#5b6a60; --light:#eef2ea; --light-dim:rgba(238,242,234,.72);
-  --red:#e2512f; --orange:#f2a12a; --blue:#2b91d4; --wa:#25d366;
-  --r:24px;
+  --moss:#4e6632; --moss-d:#33441f; --moss-dd:#1e2913; --olive:#cdc35a; --olive-d:#b3a943;
+  --ink:#1f2618; --muted:#5b6351; --paper:#faf7ef; --paper2:#f1ecdd; --line:#e3dccb;
+  --teal:#0d2b34; --wa:#25d366; --star:#e39b2d;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--jungle);color:var(--light);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;font-family:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-.container{width:min(1200px,100% - 40px);margin-inline:auto}
-h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;margin:0;letter-spacing:-.025em}
-em{font-style:normal;color:var(--olive)}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--olive)}
-.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgba(210,201,92,.18)}
-.light-sec .eyebrow{color:#7a7322}
-.light-sec .eyebrow::before{box-shadow:0 0 0 4px rgba(122,115,34,.15)}
+.container{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Lilita One","Nunito Sans",sans-serif;font-weight:400;line-height:1.06;margin:0;letter-spacing:.005em}
+.kicker{display:block;font-weight:800;font-size:14px;letter-spacing:.04em;color:var(--moss);margin-bottom:12px}
+.dark .kicker{color:var(--olive)}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:8px;border:2px solid transparent;font-weight:800;font-size:15.5px;line-height:1.2;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
 .btn svg{width:18px;height:18px;flex:none}
-.btn:hover{transform:translateY(-2px)}
-.btn-olive{background:var(--olive);color:var(--ink);box-shadow:0 10px 30px -10px rgba(210,201,92,.6)}
-.btn-olive:hover{background:var(--olive2)}
-.btn-ghost{border:1px solid rgba(238,242,234,.25);color:var(--light)}
-.btn-ghost:hover{background:rgba(238,242,234,.08)}
-.btn-dark{background:var(--ink);color:var(--cream)}
-.btn-dark:hover{background:#13261b}
-.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
-.btn-line:hover{background:rgba(10,22,16,.06)}
+.btn-moss{background:var(--moss);color:#fff}
+.btn-moss:hover{background:var(--moss-d)}
+.btn-out{border-color:var(--moss);color:var(--moss)}
+.btn-out:hover{background:var(--moss);color:#fff}
+.btn-olive{background:var(--olive);color:var(--ink)}
+.btn-olive:hover{background:#ddd36b}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
 
-/* header */
-.site-header{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
-.site-header .bar{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 9px 9px 20px;border-radius:999px;background:rgba(10,22,16,.86);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.brand{display:flex;align-items:center;gap:10px;font-family:"Lilita One",sans-serif;font-size:22px;letter-spacing:.02em;color:var(--olive);line-height:1}
-.brand svg{width:30px;height:30px}
-.nav{display:flex;gap:26px;font-size:14px;color:var(--light-dim)}
-.nav a:hover{color:var(--light)}
-.site-header .btn{padding:11px 18px;font-size:14px}
+/* topbar + header */
+.topbar{background:var(--moss-d);color:#e7e8d9;font-size:13.5px}
+.topbar .container{display:flex;align-items:center;gap:26px;height:38px;white-space:nowrap;overflow:hidden}
+.topbar .status{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff}
+.topbar .status i{width:8px;height:8px;border-radius:50%;background:#8fd16a}
+.topbar .status.closed i{background:#e3a33d}
+.topbar a:hover{color:#fff;text-decoration:underline}
+.topbar .push{margin-left:auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(250,247,239,.97);border-bottom:1px solid var(--line)}
+.site-header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.logo img{height:58px;width:auto}
+.nav{display:flex;gap:28px;font-weight:700;font-size:15.5px}
+.nav a{padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--moss);border-color:var(--olive)}
 
 /* hero */
-.hero{position:relative;overflow:hidden;background:
-  radial-gradient(900px 600px at 78% 55%,rgba(43,145,212,.16),transparent 60%),
-  radial-gradient(700px 500px at 10% 10%,rgba(210,201,92,.10),transparent 60%),
-  linear-gradient(180deg,#0d1f16 0%,#0f2219 100%)}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:48px;min-height:100vh;min-height:100svh;padding-top:96px;padding-bottom:28px}
-.hero h1{font-size:clamp(46px,6.6vw,96px);line-height:.94;font-weight:800;margin:22px 0 22px}
-.reveal-line{display:block;overflow:hidden;padding-bottom:.06em}
-.reveal-line>span{display:inline-block}
-.hero p.lead{font-size:clamp(16px,1.35vw,19px);line-height:1.6;color:var(--light-dim);max-width:520px;margin:0 0 30px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
-.proof{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:14px;color:var(--light-dim)}
-.proof strong{display:block;font-family:"Bricolage Grotesque";font-size:26px;color:var(--light);letter-spacing:-.02em}
-.proof .stars{color:var(--orange);letter-spacing:2px;font-size:13px}
-.leaf{position:absolute;z-index:1;pointer-events:none;opacity:.55}
-.leaf path{fill:#1b4a2d}
-.leaf .rib{fill:none;stroke:#0f2a19;stroke-width:3}
-.leaf-a{width:340px;left:-90px;bottom:-60px;transform:rotate(-20deg)}
-.leaf-b{width:260px;right:-70px;top:60px;transform:rotate(160deg)}
+.hero{padding:52px 0 76px}
+.hero-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,5.6vw,78px);color:var(--moss);margin-bottom:20px}
+.hero .lead{font-size:clamp(17px,1.4vw,19.5px);color:var(--muted);max-width:33em;margin:0 0 28px}
+.hero .lead strong{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.rating{display:flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:var(--muted)}
+.rating .stars{color:var(--star);letter-spacing:1px;font-size:16px}
+.rating b{color:var(--ink)}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mosaic figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:var(--paper2)}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.m-main{grid-column:span 2;aspect-ratio:2.05}
+.m-a,.m-b{aspect-ratio:4/3}
+.mosaic figcaption{position:absolute;left:12px;bottom:12px;background:rgba(250,247,239,.94);color:var(--ink);font-size:13px;font-weight:800;padding:5px 10px;border-radius:6px}
 
-/* aquarium stage */
-.aqua-stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px}
-.aqua-stage .stage-title{display:none}
-#aquarium{width:100%;max-width:640px;height:auto;max-height:62vh;max-height:62svh;overflow:visible}
-.aq-caption{width:100%;max-width:560px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:14px 18px 16px;backdrop-filter:blur(6px)}
+/* aquarium */
+.dark{color:#e9efe6}
+.aqua{background:var(--teal)}
+.aqua-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;min-height:100vh;min-height:100svh;padding:48px 0}
+.aqua h2,.terra h2{font-size:clamp(36px,4.2vw,58px);color:#fff;margin-bottom:18px}
+.dark p{color:rgba(233,239,230,.78);margin:0 0 24px;max-width:30em}
+.phone-line{font-size:15px;color:rgba(233,239,230,.7);margin-top:16px}
+.phone-line a{color:#fff;font-weight:700}
+.aqua-stage{display:flex;flex-direction:column;align-items:center;gap:16px}
+.stage-title{display:none}
+#aquarium{width:100%;max-width:640px;height:auto;max-height:64vh;max-height:64svh;overflow:visible}
+.aq-caption{width:100%;max-width:560px;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 18px 16px;background:rgba(0,0,0,.18)}
 .aq-bars{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:12px}
-.aq-bars span{height:3px;border-radius:3px;background:rgba(255,255,255,.12);transition:background .35s ease}
+.aq-bars span{height:3px;border-radius:3px;background:rgba(255,255,255,.14);transition:background .3s}
 .aq-bars span.on{background:var(--olive)}
 .aq-body{display:flex;gap:14px;align-items:flex-start;min-height:46px}
-.aq-num{font-family:"Bricolage Grotesque";font-weight:800;font-size:28px;line-height:1;color:var(--olive);min-width:38px}
-.aq-text strong{display:block;font-family:"Bricolage Grotesque";font-size:18px;letter-spacing:-.01em;margin-bottom:3px}
-.aq-text span{font-size:14px;color:var(--light-dim);line-height:1.45}
-.aq-text a{color:var(--olive);font-weight:600}
-.scroll-hint{display:inline-flex;align-items:center;gap:8px}
-.mouse{width:16px;height:24px;border:1.5px solid var(--light-dim);border-radius:10px;position:relative;flex:none}
-.mouse::after{content:"";position:absolute;left:50%;top:5px;width:2px;height:5px;margin-left:-1px;border-radius:2px;background:var(--olive);animation:wheel 1.6s ease-in-out infinite}
-@keyframes wheel{0%{opacity:0;transform:translateY(-2px)}40%{opacity:1}100%{opacity:0;transform:translateY(7px)}}
-
-/* svg animation helpers */
+.aq-num{font-family:"Lilita One";font-size:28px;line-height:1;color:var(--olive);min-width:38px}
+.aq-text strong{display:block;font-size:17px;color:#fff;margin-bottom:2px}
+.aq-text span{font-size:14.5px;color:rgba(233,239,230,.75);line-height:1.45}
+.aq-text a{color:var(--olive);font-weight:800}
 #aquarium .wave{animation:wave 3.2s linear infinite}
 @keyframes wave{to{transform:translateX(-120px)}}
 #aquarium .bob{transform-box:fill-box;animation:bob 3.4s ease-in-out infinite}
@@ -103,200 +101,200 @@ em{font-style:normal;color:var(--olive)}
 @keyframes bob{50%{transform:translate(7px,-4px)}}
 #aquarium .bubble{transform-box:fill-box;animation:rise 4.2s linear infinite;opacity:0}
 @keyframes rise{0%{transform:translateY(0);opacity:0}12%{opacity:.9}100%{transform:translateY(-270px);opacity:0}}
+
+/* setores */
+.section{padding:clamp(72px,9vw,112px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 48px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head h2{font-size:clamp(34px,4vw,54px);color:var(--moss);max-width:15em}
+.sec-head p{max-width:27em;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .25s}
+.card.wide{grid-column:span 3}
+.card:hover{border-color:#cfc6ae;box-shadow:0 14px 30px -18px rgba(31,38,24,.35)}
+.card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--paper2)}
+.card.wide .ph{aspect-ratio:16/8}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .ph img{transform:scale(1.04)}
+.card .ph.contain{display:grid;place-items:center;padding:16px}
+.card .ph.contain img{width:auto;height:100%;object-fit:contain}
+.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:27px;color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.55}
+.card .go{margin-top:auto;padding-top:12px;font-weight:800;font-size:15px;color:var(--moss);display:inline-flex;align-items:center;gap:6px}
+.card .go svg{width:16px;height:16px;transition:transform .2s}
+.card:hover .go svg{transform:translateX(3px)}
+.tag{display:inline-block;align-self:flex-start;font-size:12.5px;font-weight:800;color:var(--moss);background:#e7ecd8;border-radius:5px;padding:3px 8px;margin-bottom:4px}
+
+/* terrário */
+.terra{background:var(--moss-dd)}
+.terra-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;min-height:100vh;min-height:100svh;padding:56px 0}
+.checks{list-style:none;padding:0;margin:0 0 30px;display:grid;gap:10px}
+.checks li{display:flex;gap:11px;align-items:center;font-size:16px;color:#ecebdc}
+.checks svg{width:21px;height:21px;flex:none;color:var(--olive)}
+.terra-stage{display:flex;flex-direction:column;align-items:center;justify-content:center}
+#terra{width:100%;max-width:600px;height:auto;max-height:88vh;max-height:88svh}
 #terra .g-tail{transform-box:fill-box;transform-origin:0% 60%;animation:tail 2.6s ease-in-out infinite}
 @keyframes tail{50%{transform:rotate(-7deg)}}
 #terra .glow{animation:glow 2.8s ease-in-out infinite}
 @keyframes glow{50%{opacity:.6}}
-#terra .ll{stroke:rgba(210,201,92,.75);stroke-width:1.5;stroke-dasharray:3 5}
+#terra .ll{stroke:rgba(205,195,90,.75);stroke-width:1.5;stroke-dasharray:3 5}
 #terra .ld{fill:var(--olive)}
-#terra .lt{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:23px;fill:#f3efe0;letter-spacing:-.01em}
-#terra .ls{font-family:Inter,sans-serif;font-size:15.5px;fill:rgba(243,239,224,.62)}
+#terra .lt{font-family:"Lilita One",sans-serif;font-size:24px;fill:#f3f1e2}
+#terra .ls{font-family:"Nunito Sans",sans-serif;font-size:16px;fill:rgba(243,241,226,.66)}
 
-/* marquee */
-.marquee{background:var(--olive);color:var(--ink);overflow:hidden;padding:18px 0;position:relative;z-index:3}
-.marquee .track{display:flex;width:max-content;animation:marquee 34s linear infinite}
-.marquee .group{display:flex;align-items:center;gap:34px;padding-right:34px;font-family:"Lilita One",sans-serif;font-size:clamp(22px,2.6vw,32px);letter-spacing:.01em;white-space:nowrap}
-.marquee svg{width:22px;height:22px;flex:none}
-@keyframes marquee{to{transform:translateX(-50%)}}
+/* sobre */
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+.about-photos{position:relative}
+.about-photos .p1{border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:var(--paper2)}
+.about-photos .p1 img{width:100%;height:100%;object-fit:cover}
+.about-photos .p2{position:absolute;right:-24px;bottom:-28px;width:46%;aspect-ratio:1;border-radius:12px;overflow:hidden;border:6px solid var(--paper);background:var(--paper2)}
+.about-photos .p2 img{width:100%;height:100%;object-fit:cover}
+.about h2{font-size:clamp(34px,3.8vw,52px);color:var(--moss);margin-bottom:18px}
+.about p{color:var(--muted);margin:0 0 16px;max-width:34em}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin:30px 0 0;padding:0}
+.stats div{padding:0 28px;border-left:2px solid var(--line)}
+.stats div:first-child{padding-left:0;border-left:0}
+.stats dt{font-family:"Lilita One";font-size:clamp(34px,3.4vw,46px);color:var(--ink);line-height:1}
+.stats dt small{font-size:.55em;color:var(--star);margin-left:3px}
+.stats dd{margin:6px 0 0;font-size:14.5px;color:var(--muted);line-height:1.4;max-width:12em}
 
-/* light sections */
-.light-sec{background:var(--cream);color:var(--text)}
-.section{padding:clamp(80px,11vw,140px) 0}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:48px;flex-wrap:wrap}
-.sec-head h2{font-size:clamp(36px,4.6vw,64px);line-height:1;font-weight:800;max-width:720px;margin-top:16px}
-.light-sec em{color:#6d8f2e}
-.sec-head p{max-width:400px;color:var(--muted);line-height:1.6;margin:0}
-
-/* setores */
-.setores{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:auto auto;gap:18px}
-.card{position:relative;border-radius:var(--r);padding:30px;background:#fffdf5;border:1px solid rgba(20,33,26,.08);display:flex;flex-direction:column;gap:12px;transition:transform .35s ease,box-shadow .35s ease;overflow:hidden}
-.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(20,33,26,.35)}
-.card .ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--cream2);color:var(--text);margin-bottom:8px}
-.card .ico svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:26px;font-weight:700}
-.card p{margin:0;color:var(--muted);line-height:1.6;font-size:15px}
-.card .go{margin-top:auto;padding-top:14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}
-.card .go svg{width:16px;height:16px;transition:transform .25s}
-.card:hover .go svg{transform:translateX(4px)}
-.card-big{grid-row:span 2;background:linear-gradient(160deg,#0f3a4a 0%,#0c2a33 55%,#0f2219 100%);color:var(--light);border:none;padding:36px;min-height:520px}
-.card-big .ico{background:rgba(255,255,255,.1);color:var(--light)}
-.card-big p{color:var(--light-dim)}
-.card-big h3{font-size:clamp(32px,3vw,42px);font-weight:800}
-.card-big .tag{position:absolute;top:30px;right:30px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:rgba(210,201,92,.16);color:var(--olive)}
-.card-big .mini-fish{position:absolute;right:-30px;bottom:110px;width:260px;opacity:.9}
-.card-big .go{color:var(--olive)}
-
-/* terra */
-.terra{position:relative;background:radial-gradient(700px 600px at 70% 50%,rgba(242,161,42,.10),transparent 60%),linear-gradient(180deg,#0f2219,#0b1a13)}
-.terra-inner{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:40px;min-height:100vh;min-height:100svh;padding:60px 0}
-.terra h2{font-size:clamp(36px,4.4vw,62px);line-height:1;font-weight:800;margin:18px 0 20px}
-.terra p{color:var(--light-dim);line-height:1.65;max-width:470px;margin:0 0 26px;font-size:17px}
-.checks{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:12px}
-.checks li{display:flex;gap:12px;align-items:center;font-size:15.5px}
-.checks svg{width:22px;height:22px;flex:none;color:var(--olive)}
-.terra-stage{display:flex;flex-direction:column;align-items:center;justify-content:center}
-.terra-stage .stage-title{display:none}
-#terra{width:100%;max-width:600px;height:auto;max-height:88vh;max-height:88svh}
-
-/* numbers */
-.numbers{background:var(--ink)}
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.num{border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:30px 26px;background:rgba(255,255,255,.025)}
-.num .big{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(46px,5vw,70px);line-height:1;color:var(--olive);letter-spacing:-.03em}
-.num .big small{font-size:.5em;margin-left:4px}
-.num p{margin:12px 0 0;color:var(--light-dim);line-height:1.5;font-size:15px}
-.numbers .sec-head p{color:var(--light-dim)}
-
-/* online store band */
-.band{background:linear-gradient(120deg,var(--olive) 0%,#c4bb48 100%);color:var(--ink);border-radius:32px;padding:clamp(34px,5vw,64px);display:grid;grid-template-columns:1.3fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
-.band h2{font-size:clamp(32px,4vw,54px);line-height:1;font-weight:800}
-.band p{margin:14px 0 0;font-size:17px;line-height:1.55;max-width:560px;color:rgba(10,22,16,.75)}
-.band .ctas{display:flex;flex-direction:column;gap:12px}
-.band .paw{position:absolute;right:-30px;top:-40px;width:200px;opacity:.12}
-.band-wrap{background:var(--cream);padding:0 0 clamp(80px,10vw,120px)}
-
-/* visit */
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:18px}
-.visit-card{background:#fffdf5;border:1px solid rgba(20,33,26,.08);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-.visit-photo{position:relative;aspect-ratio:16/8;background:#cfd8c8 center/cover no-repeat}
-.visit-photo img{width:100%;height:100%;object-fit:cover}
-.logo-badge{position:absolute;left:20px;bottom:-34px;width:96px;height:96px;border-radius:24px;background:var(--cream);box-shadow:0 12px 30px -12px rgba(0,0,0,.35);display:grid;place-items:center;padding:6px}
-.logo-badge img{width:100%;height:100%;object-fit:contain}
-.visit-info{padding:52px 28px 28px;display:grid;gap:18px}
+/* visite */
+.visit-sec{background:var(--paper2)}
+.visit{display:grid;grid-template-columns:1.05fr 1fr;gap:20px}
+.visit-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.visit-card .ph{aspect-ratio:2.05;background:var(--paper2)}
+.visit-card .ph img{width:100%;height:100%;object-fit:cover}
+.visit-info{padding:26px 28px 28px;display:grid;gap:20px}
 .row{display:flex;gap:14px;align-items:flex-start}
-.row svg{width:22px;height:22px;flex:none;color:#6d8f2e;margin-top:2px}
-.row strong{display:block;font-size:15px;margin-bottom:2px}
-.row span,.row a{color:var(--muted);font-size:15px;line-height:1.55}
-.row a:hover{color:var(--text)}
-.visit-info .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.map{border-radius:var(--r);overflow:hidden;min-height:440px;border:1px solid rgba(20,33,26,.08);background:#dfe5d6}
-.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:saturate(.85)}
+.row>svg{width:22px;height:22px;flex:none;color:var(--moss);margin-top:3px}
+.row strong{display:block;font-size:15.5px}
+.row span,.row a{color:var(--muted);font-size:15.5px}
+.row a:hover{color:var(--moss)}
+.hours{display:grid;grid-template-columns:auto auto;gap:2px 18px;font-size:15.5px;color:var(--muted);margin-top:2px}
+.hours .today{color:var(--ink);font-weight:800}
+.map{border-radius:12px;overflow:hidden;border:1px solid var(--line);min-height:460px;background:#e2e5d6}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+.notice{margin-top:20px;background:#fff;border:1px solid var(--line);border-left:6px solid var(--olive);border-radius:12px;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px 32px;flex-wrap:wrap}
+.notice h3{font-size:26px;color:var(--ink);margin-bottom:4px}
+.notice p{margin:0;color:var(--muted);max-width:40em}
 
 /* footer */
-footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-size:14.5px}
-.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
-.foot h4{font-family:"Bricolage Grotesque";color:var(--light);font-size:16px;margin:0 0 14px;letter-spacing:-.01em}
-.foot a:hover{color:var(--light)}
-.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
-.foot .logo-sq{width:104px;height:104px;border-radius:24px;background:var(--cream);padding:6px;margin-bottom:16px}
-.foot .logo-sq img{width:100%;height:100%;object-fit:contain}
-.slogan{font-family:"Lilita One";font-size:22px;color:var(--olive)}
-.foot-bottom{margin-top:50px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
-.kodra{display:inline-flex;align-items:center;gap:8px;color:var(--light-dim)}
-.kodra b{color:var(--olive);font-weight:600}
+footer{background:var(--moss-dd);color:rgba(236,235,220,.75);padding:60px 0 26px;font-size:15px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.foot h4{font-family:"Lilita One";font-weight:400;font-size:19px;color:#fff;margin:0 0 12px;letter-spacing:.01em}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a:hover{color:#fff}
+.foot .logo-sq{display:inline-block;background:var(--paper);border-radius:10px;padding:10px 14px;margin-bottom:14px}
+.foot .logo-sq img{height:64px;width:auto}
+.slogan{font-family:"Lilita One";font-size:21px;color:var(--olive)}
+.foot-bottom{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px}
+.foot-bottom b{color:var(--olive)}
 
-/* floating whatsapp */
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.7);transition:transform .25s}
-.wa-float:hover{transform:scale(1.07)}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 .wa-float svg{width:30px;height:30px}
-.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.2s ease-out infinite}
-@keyframes ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
 
-/* responsive */
+/* responsivo */
 @media (max-width:1080px){
   .nav{display:none}
-  .setores{grid-template-columns:1fr 1fr}
-  .card-big{grid-row:auto;grid-column:span 2;min-height:420px}
-  .nums{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .card,.card.wide{grid-column:span 1}
+  .card.wide .ph{aspect-ratio:4/3}
   .foot{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){
-  .hero-inner{grid-template-columns:1fr;min-height:auto;padding-top:120px;padding-bottom:40px;gap:0}
-  .aqua-stage{height:100vh;height:100svh;justify-content:center;padding:70px 0 20px}
-  .aqua-stage .stage-title{display:block;font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;text-align:center;letter-spacing:-.02em}
+  .hero{padding:28px 0 56px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .aqua-grid{grid-template-columns:1fr;min-height:auto;padding:64px 0 0;gap:0}
+  .aqua-stage{height:100vh;height:100svh;justify-content:center;padding:24px 0}
+  .stage-title{display:block;font-family:"Lilita One";font-size:24px;text-align:center;color:#fff}
   #aquarium{max-height:46svh}
-  .terra-inner{grid-template-columns:1fr;min-height:auto;padding:90px 0 0;gap:0}
-  .terra-stage{height:100vh;height:100svh;padding:70px 0 10px}
-  .terra-stage .stage-title{display:block;font-family:"Bricolage Grotesque";font-weight:800;font-size:24px;text-align:center;margin-bottom:6px}
-  #terra{max-height:calc(100svh - 120px)}
-  #terra .lt{font-size:27px}
+  .terra-grid{grid-template-columns:1fr;min-height:auto;padding:64px 0 0;gap:0}
+  .terra-stage{height:100vh;height:100svh;padding:24px 0 8px}
+  #terra{max-height:calc(100svh - 90px)}
+  #terra .lt{font-size:28px}
   #terra .ls{font-size:18px}
+  .about{grid-template-columns:1fr;gap:56px}
+  .about-photos{max-width:520px}
+  .about-photos .p2{right:-8px}
   .visit{grid-template-columns:1fr}
-  .band{grid-template-columns:1fr}
-  .band .ctas{flex-direction:row;flex-wrap:wrap}
+  .map,.map iframe{min-height:340px}
 }
 @media (max-width:640px){
+  body{font-size:16px}
   .container{width:calc(100% - 32px)}
-  .site-header .bar{padding:7px 7px 7px 16px}
-  .brand{font-size:19px}
-  .brand svg{width:26px;height:26px}
+  .topbar .addr,.topbar .push{display:none}
+  .site-header .bar{height:68px}
+  .logo img{height:48px}
   .site-header .btn span{display:none}
   .site-header .btn{padding:11px}
-  .setores{grid-template-columns:1fr}
-  .card-big{grid-column:auto;min-height:440px;padding:30px}
-  .card-big .mini-fish{width:200px;bottom:120px}
-  .nums{grid-template-columns:1fr}
-  .proof{gap:18px}
+  .cards{grid-template-columns:1fr}
+  .ctas .btn{flex:1 1 auto}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+  .stats div{padding:0 12px}
+  .stats dd{font-size:13px}
   .foot{grid-template-columns:1fr}
-  .btn{padding:14px 20px}
-  .hero .ctas .btn{flex:1 1 auto;justify-content:center}
+  .notice{padding:22px}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container">
+    <span class="status" id="status"><i></i><span>Seg a sáb 10h–18h · Dom 10h–13h</span></span>
+    <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Galp%C3%A3o+Animal+Rua+Baumann+1363+S%C3%A3o+Paulo" target="_blank" rel="noopener">Rua Baumann, 1363 – Vila Leopoldina, São Paulo</a>
+    <a class="push" href="tel:+551138370581">(11) 3837-0581</a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="container bar">
-    <a href="#topo" class="brand" aria-label="Galpão Animal — início">
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 25c6-9 18-12 28-6l8-7v24l-8-7c-10 6-22 3-28-4z"/><circle cx="14" cy="22.5" r="1.6" fill="currentColor"/></svg>
-      GALPÃO ANIMAL
-    </a>
+    <a href="#topo" class="logo" aria-label="Galpão Animal, início"><img src="img/logo.png" alt="Galpão Animal" width="626" height="328"></a>
     <nav class="nav" aria-label="Principal">
+      <a href="#aquarismo">Aquarismo</a>
       <a href="#setores">Setores</a>
-      <a href="#terrarios">Répteis</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#visite">Visite</a>
+      <a href="#repteis">Répteis</a>
+      <a href="#sobre">A loja</a>
+      <a href="#visite">Como chegar</a>
     </nav>
-    <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Falar no WhatsApp</span></a>
+    <a class="btn btn-moss" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Chamar no WhatsApp</span></a>
   </div>
 </header>
 
 <main id="topo">
-<!-- HERO + AQUÁRIO -->
-<section class="hero" id="aquarismo">
-  <svg class="leaf leaf-a" viewBox="0 0 300 120" aria-hidden="true"><path d="M0,60 C60,-10 200,-10 300,60 C200,130 60,130 0,60Z"/><path class="rib" d="M10,60 L290,60 M80,60 L60,30 M130,60 L110,22 M180,60 L165,22 M230,60 L220,30 M80,60 L60,90 M130,60 L110,98 M180,60 L165,98 M230,60 L220,90"/></svg>
-  <svg class="leaf leaf-b" viewBox="0 0 300 120" aria-hidden="true"><path d="M0,60 C60,-10 200,-10 300,60 C200,130 60,130 0,60Z"/><path class="rib" d="M10,60 L290,60 M80,60 L60,30 M130,60 L110,22 M180,60 L165,22 M230,60 L220,30 M80,60 L60,90 M130,60 L110,98 M180,60 L165,98 M230,60 L220,90"/></svg>
-  <div class="container hero-inner">
+<section class="hero">
+  <div class="container hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow" data-fade>Pioneira no Brasil em pets não convencionais</span>
-      <h1><span class="reveal-line"><span>Lugar de</span></span><span class="reveal-line"><span><em>bicho legal.</em></span></span></h1>
-      <p class="lead" data-fade>Aquarismo, aves, répteis e exóticos. Há mais de 30 anos em São Paulo, com animais totalmente legalizados e atendimento de quem entende de verdade.</p>
-      <div class="ctas" data-fade>
-        <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp</a>
-        <a class="btn btn-ghost" href="#visite">Conhecer a loja</a>
+      <h1 data-in>Lugar de bicho legal!</h1>
+      <p class="lead" data-in>A maior loja do Brasil especializada em <strong>aquarismo, animais exóticos e silvestres</strong>. São mais de 30 anos na Vila Leopoldina, com animais totalmente legalizados e gente que entende de cada espécie.</p>
+      <div class="ctas" data-in>
+        <a class="btn btn-moss" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Chamar no WhatsApp</a>
+        <a class="btn btn-out" href="#visite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
       </div>
-      <div class="proof" data-fade>
-        <div><strong>4,6 <span class="stars">★★★★★</span></strong>2.600+ avaliações no Google</div>
-        <div><strong>133 mil</strong>seguidores no Instagram</div>
-        <div><strong>+30 anos</strong>de história</div>
-      </div>
+      <div class="rating" data-in><span class="stars">★★★★★</span><span><b>4,6 no Google</b> · mais de 2.600 avaliações</span></div>
     </div>
+    <div class="mosaic">
+      <figure class="m-main" data-in><img src="img/fachada.webp" alt="Fachada da Galpão Animal na Rua Baumann" width="1595" height="750"><figcaption>Nossa loja na Vila Leopoldina</figcaption></figure>
+      <figure class="m-a" data-in><img src="img/ararajuba.webp" alt="Ararajuba" width="1715" height="750" style="object-position:62% 40%"></figure>
+      <figure class="m-b" data-in><img src="img/furao.webp" alt="Furão" width="1675" height="750" style="object-position:28% 30%"></figure>
+    </div>
+  </div>
+</section>
 
+<section class="aqua dark" id="aquarismo">
+  <div class="container aqua-grid">
+    <div class="aqua-copy">
+      <span class="kicker" data-reveal>Setor de Aquarismo</span>
+      <h2 data-reveal>Monte seu aquário com quem entende</h2>
+      <p data-reveal>Peixes ornamentais, de cardumes pequenos a aruanãs e arraias, plantas, aquários completos, filtros e iluminação. O Aquarismo tem equipe e atendimento próprios para ajudar desde o primeiro aquário.</p>
+      <div class="ctas" data-reveal>
+        <a class="btn btn-olive" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar com o Aquarismo</a>
+      </div>
+      <div class="phone-line" data-reveal>Ou ligue: <a href="tel:+551136410337">(11) 3641-0337</a></div>
+    </div>
     <div class="aqua-stage">
-      <div class="stage-title">Role e monte o aquário <em>↓</em></div>
+      <div class="stage-title">Role para montar o aquário</div>
       <svg id="aquarium" viewBox="0 0 640 520" role="img" aria-label="Aquário plantado sendo montado: substrato, rochas, tronco, plantas, água e peixes">
         <defs>
           <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fc0dd" stop-opacity=".55"/><stop offset="1" stop-color="#0a4660" stop-opacity=".88"/></linearGradient>
@@ -399,81 +397,64 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
           <text x="320" y="85" text-anchor="middle" font-family="Lilita One, sans-serif" font-size="10" letter-spacing="3" fill="#d2c95c" opacity=".85">GALPÃO ANIMAL</text>
         </g>
       </svg>
+
       <div class="aq-caption" aria-live="polite">
         <div class="aq-bars"><span></span><span></span><span></span><span></span><span></span></div>
         <div class="aq-body">
           <div class="aq-num">↓</div>
-          <div class="aq-text"><strong class="scroll-hint"><i class="mouse"></i>Role para montar o aquário</strong><span>Do substrato aos peixes, do jeito que o nosso setor de Aquarismo faz.</span></div>
+          <div class="aq-text"><strong>Role a página para montar o aquário</strong><span>Do substrato aos peixes, etapa por etapa.</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true">
-  <div class="track"><div class="group"><span>Aquarismo</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Aves</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Répteis</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Furões</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Ouriços</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Peixes ornamentais</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Terrários</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Rações e acessórios</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg></div><div class="group"><span>Aquarismo</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Aves</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Répteis</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Furões</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Ouriços</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Peixes ornamentais</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Terrários</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg><span>Rações e acessórios</span><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg></div></div>
-</div>
-
-<!-- SETORES -->
-<section class="light-sec section" id="setores">
+<section class="section" id="setores">
   <div class="container">
     <div class="sec-head" data-reveal>
-      <div><span class="eyebrow">Nossos setores</span><h2>Um mundo de bichos <em>não convencionais.</em></h2></div>
-      <p>Do aquário plantado ao furão, cada setor tem equipe especializada, produtos certos e animais saudáveis e legalizados.</p>
+      <h2>O que você encontra na Galpão</h2>
+      <p>Cada setor tem gente especializada, produtos certos e animais saudáveis e legalizados. Na dúvida, chame no WhatsApp que a gente orienta.</p>
     </div>
-    <div class="setores">
-      <a class="card card-big" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener" data-reveal>
-        <span class="tag">Atendimento exclusivo</span>
-        <div class="ico"><svg viewBox="0 0 48 48"><path d="M5 25c6-9 18-12 28-6l8-7v24l-8-7c-10 6-22 3-28-4z"/><circle cx="14" cy="22.5" r="1.4" fill="currentColor"/></svg></div>
-        <h3>Aquarismo</h3>
-        <p>Peixes ornamentais, de pequenos cardumes a aruanãs e arraias, plantas, aquários completos, filtros, iluminação e acessórios. Um setor inteiro só para quem ama o mundo aquático.</p>
-        <svg class="mini-fish" viewBox="0 0 260 120" aria-hidden="true"><use href="#tetra" x="10" y="20" width="70" height="28"/><use href="#tetra" x="70" y="56" width="60" height="24"/><use href="#tetra" x="130" y="18" width="64" height="26"/><use href="#platy" x="160" y="70" width="70" height="36"/></svg>
-        <span class="go">Falar com o Aquarismo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    <div class="cards">
+      <a class="card" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener" data-reveal>
+        <div class="ph"><img src="img/peixe-azul.webp" alt="Peixe cirurgião azul" loading="lazy" width="1600" height="1067"></div>
+        <div class="body"><span class="tag">Atendimento próprio</span><h3>Aquarismo</h3><p>Peixes, plantas, aquários montados, filtros, iluminação e manutenção.</p><span class="go">Falar com o Aquarismo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
       <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20aves." target="_blank" rel="noopener" data-reveal>
-        <div class="ico"><svg viewBox="0 0 48 48"><path d="M17 42c-7-6-8-17-2-23 4-4 11-4 14 1 3 4 1 10-3 13l7 9"/><path d="M23 17c-3-5-1-10 4-12M27 16c0-5 3-8 8-9"/><circle cx="26" cy="22" r="1.4" fill="currentColor"/><path d="M30 23l5 2-5 1.5"/></svg></div>
-        <h3>Aves</h3>
-        <p>Calopsitas, papagaios, araras e outras aves mansas e legalizadas, com gaiolas, rações e acessórios.</p>
-        <span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="ph"><img src="img/ararajuba.webp" alt="Ararajuba" loading="lazy" width="1715" height="750" style="object-position:60% 40%"></div>
+        <div class="body"><h3>Aves</h3><p>Ararajubas, papagaios, jandaias, calopsitas e muitas outras, com gaiolas e alimentação.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
       <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20r%C3%A9pteis%20e%20terr%C3%A1rios." target="_blank" rel="noopener" data-reveal>
-        <div class="ico"><svg viewBox="0 0 48 48"><path d="M8 38c8 5 26 5 30-2 3-6-6-9-14-9s-14-3-12-9 12-8 20-5"/><path d="M32 13c3-2 7-1 8 2-1 3-5 4-8 2"/><circle cx="36.5" cy="14.5" r="1" fill="currentColor"/></svg></div>
-        <h3>Répteis</h3>
-        <p>Serpentes, lagartos e quelônios, com terrários, iluminação e tudo para montar o habitat completo.</p>
-        <span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="ph"><img src="img/tartaruga.webp" alt="Tartaruga" loading="lazy" width="1735" height="750" style="object-position:40% 50%"></div>
+        <div class="body"><h3>Répteis</h3><p>Serpentes, lagartos e quelônios, com terrários, lâmpadas e tudo para o habitat.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
-      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20pequenos%20ex%C3%B3ticos%20%28fur%C3%B5es%2C%20ouri%C3%A7os...%29." target="_blank" rel="noopener" data-reveal>
-        <div class="ico"><svg viewBox="0 0 48 48"><path d="M7 34c0-10 8-18 18-18 9 0 15 6 16 13l3 2-3 3H7z"/><path d="M12 24l-4-4M16 20l-2-5M22 17l0-5M28 17l3-4M34 20l4-3"/><circle cx="36" cy="27" r="1.3" fill="currentColor"/><path d="M14 34v4M30 34v4"/></svg></div>
-        <h3>Pequenos exóticos</h3>
-        <p>Furões, ouriços e outros pets não convencionais, com orientação sobre manejo, alimentação e cuidados.</p>
-        <span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <a class="card wide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20pequenos%20ex%C3%B3ticos%20%28fur%C3%B5es%2C%20ouri%C3%A7os...%29." target="_blank" rel="noopener" data-reveal>
+        <div class="ph"><img src="img/furao.webp" alt="Furão" loading="lazy" width="1675" height="750" style="object-position:30% 35%"></div>
+        <div class="body"><h3>Pequenos exóticos</h3><p>Furões, ouriços e outros pets não convencionais, com orientação de manejo e cuidados.</p><span class="go">Saber mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
-      <a class="card" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20de%20ra%C3%A7%C3%B5es/acess%C3%B3rios." target="_blank" rel="noopener" data-reveal>
-        <div class="ico"><svg viewBox="0 0 48 48"><path d="M5 26h38c-1 9-8 14-19 14S6 35 5 26z"/><circle cx="17" cy="20" r="3"/><circle cx="25" cy="17.5" r="3"/><circle cx="32" cy="21" r="2.6"/></svg></div>
-        <h3>Rações e acessórios</h3>
-        <p>Alimentação específica, suplementos, gaiolas e equipamentos. Retire na loja ou receba em casa.</p>
-        <span class="go">Fazer pedido <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <a class="card wide" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20de%20ra%C3%A7%C3%B5es/acess%C3%B3rios." target="_blank" rel="noopener" data-reveal>
+        <div class="ph contain"><img src="img/racao.webp" alt="Ração Megazoo para papagaios" loading="lazy" width="600" height="788"></div>
+        <div class="body"><h3>Rações e acessórios</h3><p>Alimentação específica para cada espécie, suplementos e equipamentos. Retire na loja ou receba em casa.</p><span class="go">Fazer pedido <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- TERRÁRIO -->
-<section class="terra" id="terrarios">
-  <div class="container terra-inner">
+<section class="terra dark" id="repteis">
+  <div class="container terra-grid">
     <div class="terra-copy">
-      <span class="eyebrow" data-reveal>Répteis &amp; terrários</span>
-      <h2 data-reveal>Cada detalhe do habitat, <em>do jeito certo.</em></h2>
-      <p data-reveal>Répteis precisam de temperatura, luz e abrigo corretos para viver bem. A nossa equipe ajuda você a escolher o animal e a montar o terrário completo, item por item, para a espécie certa.</p>
+      <span class="kicker" data-reveal>Répteis e terrários</span>
+      <h2 data-reveal>Cada detalhe do habitat, do jeito certo</h2>
+      <p data-reveal>Réptil precisa de temperatura, luz e abrigo corretos para viver bem. A equipe ajuda a escolher o animal e a montar o terrário completo, item por item, para a espécie certa.</p>
       <ul class="checks" data-reveal>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Montagem completa do terrário</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Iluminação UVB e aquecimento na medida</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Lâmpada UVB e aquecimento na medida</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Animais legalizados, com orientação de manejo</li>
       </ul>
       <a class="btn btn-olive" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20r%C3%A9pteis%20e%20terr%C3%A1rios." target="_blank" rel="noopener" data-reveal><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Montar meu terrário</a>
     </div>
     <div class="terra-stage">
-      <div class="stage-title">Role e veja por dentro <em>↓</em></div>
+      <div class="stage-title">Role para ver por dentro</div>
       <svg id="terra" viewBox="0 0 600 900" role="img" aria-label="Terrário em vista explodida: tampa com iluminação, galhos e plantas, réptil, toca, substrato e terrário de vidro">
 <defs>
 <pattern id="tMesh" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0,0 L7,7 M7,0 L0,7" stroke="rgba(255,255,255,.16)" stroke-width="1"/></pattern>
@@ -577,76 +558,70 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
   </div>
 </section>
 
-<!-- NÚMEROS -->
-<section class="numbers section" id="sobre">
-  <div class="container">
-    <div class="sec-head" data-reveal>
-      <div><span class="eyebrow">Por que a Galpão Animal</span><h2>Mais de três décadas fazendo <em>história.</em></h2></div>
-      <p>Pioneira no Brasil em pets não convencionais, a Galpão Animal virou ponto de encontro de quem ama a natureza em São Paulo.</p>
+<section class="section" id="sobre">
+  <div class="container about">
+    <div class="about-photos" data-reveal>
+      <div class="p1"><img src="img/tartarugas.webp" alt="Tartarugas na loja" loading="lazy" width="827" height="1014"></div>
+      <div class="p2"><img src="img/peixe-bolinha.webp" alt="Peixe japonês" loading="lazy" width="1024" height="683"></div>
     </div>
-    <div class="nums">
-      <div class="num" data-reveal><div class="big">+<span class="count" data-to="30">30</span></div><p>anos de história com aquarismo, aves, répteis e exóticos</p></div>
-      <div class="num" data-reveal><div class="big"><span class="count" data-to="4.6" data-dec="1">4,6</span><small>★</small></div><p>de nota no Google, com mais de 2.600 avaliações</p></div>
-      <div class="num" data-reveal><div class="big"><span class="count" data-to="133">133</span><small>mil</small></div><p>seguidores acompanhando a loja no Instagram</p></div>
-      <div class="num" data-reveal><div class="big"><span class="count" data-to="100">100</span><small>%</small></div><p>dos animais totalmente legalizados</p></div>
+    <div>
+      <span class="kicker" data-reveal>A loja</span>
+      <h2 data-reveal>Mais de 30 anos fazendo história com pets não convencionais</h2>
+      <p data-reveal>A Galpão Animal foi pioneira no Brasil em aquarismo, animais silvestres e exóticos. Aqui você encontra aves, répteis, peixes e pequenos exóticos, todos totalmente legalizados, além de rações, equipamentos e orientação para cuidar bem de cada um.</p>
+      <p data-reveal>Vale a visita: muita gente vem só para conhecer os bichos de perto.</p>
+      <dl class="stats" data-reveal>
+        <div><dt>+<span class="count" data-to="30">30</span></dt><dd>anos de história</dd></div>
+        <div><dt><span class="count" data-to="4.6" data-dec="1">4,6</span><small>★</small></dt><dd>no Google, 2.600+ avaliações</dd></div>
+        <div><dt><span class="count" data-to="133">133</span> mil</dt><dd>seguidores no Instagram</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
-<!-- LOJA VIRTUAL -->
-<section class="light-sec section" id="visite">
+<section class="section visit-sec" id="visite">
   <div class="container">
     <div class="sec-head" data-reveal>
-      <div><span class="eyebrow">Visite a loja</span><h2>Um passeio pela natureza <em>no meio de São Paulo.</em></h2></div>
-      <p>Na Vila Leopoldina, pertinho do Ceagesp. Venha ver de perto, tirar dúvidas com a equipe e conhecer cada setor.</p>
+      <h2>Venha conhecer a loja</h2>
+      <p>Na Vila Leopoldina, pertinho do Ceagesp. Venha ver os bichos de perto e tirar dúvidas com a equipe.</p>
     </div>
     <div class="visit">
       <div class="visit-card" data-reveal>
-        <div class="visit-photo">
-          <img src="https://galpaoanimal.com.br/wp-content/uploads/2024/07/2023-01-21.jpg" alt="Fachada da loja Galpão Animal" loading="lazy" onerror="this.remove()">
-          <div class="logo-badge"><img src="https://galpaoanimal.com.br/wp-content/uploads/2022/01/Logo-Verde-png.png" alt="Logo Galpão Animal" loading="lazy" onerror="this.parentNode.remove()"></div>
-        </div>
+        <div class="ph"><img src="img/fachada.webp" alt="Fachada da Galpão Animal" loading="lazy" width="1595" height="750"></div>
         <div class="visit-info">
           <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Endereço</strong><span>Rua Baumann, 1363 – Vila Leopoldina<br>São Paulo – SP, 05318-000</span></div></div>
-          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6.5V12l3.5 2"/></svg><div><strong>Horário</strong><span>Segunda a sábado, das 10h às 18h<br>Domingo, das 10h às 13h</span></div></div>
-          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 006.5 6.5L16 13.5l5 2V19a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg><div><strong>Telefones</strong><a href="tel:+551138370581">(11) 3837-0581</a> · <a href="tel:+551136410337">Aquarismo (11) 3641-0337</a></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6.5V12l3.5 2"/></svg><div><strong>Horário</strong>
+            <div class="hours"><span data-days="1-5">Segunda a sexta</span><span data-days="1-5">10h às 18h</span><span data-days="6">Sábado</span><span data-days="6">10h às 18h</span><span data-days="0">Domingo</span><span data-days="0">10h às 13h</span></div></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 006.5 6.5L16 13.5l5 2V19a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg><div><strong>Telefones</strong><a href="tel:+551138370581">(11) 3837-0581</a><br><a href="tel:+551136410337">Aquarismo: (11) 3641-0337</a></div></div>
           <div class="ctas">
-            <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Galp%C3%A3o+Animal+Rua+Baumann+1363+S%C3%A3o+Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
-            <a class="btn btn-line" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+            <a class="btn btn-moss" href="https://www.google.com/maps/search/?api=1&amp;query=Galp%C3%A3o+Animal+Rua+Baumann+1363+S%C3%A3o+Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Abrir no Google Maps</a>
+            <a class="btn btn-out" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
           </div>
         </div>
       </div>
       <div class="map" data-reveal>
-        <iframe title="Mapa: Galpão Animal, Rua Baumann 1363, Vila Leopoldina" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Galp%C3%A3o+Animal,+Rua+Baumann,+1363,+Vila+Leopoldina,+S%C3%A3o+Paulo&amp;z=16&amp;output=embed"></iframe>
+        <iframe title="Mapa: Galpão Animal, Rua Baumann 1363" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Galp%C3%A3o+Animal,+Rua+Baumann,+1363,+Vila+Leopoldina,+S%C3%A3o+Paulo&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+    <div class="notice" data-reveal>
+      <div>
+        <h3>Nossa loja virtual está voltando</h3>
+        <p>Enquanto isso, a gente faz pedidos pelo WhatsApp, com retirada na loja ou entrega.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-moss" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Fazer pedido</a>
+        <a class="btn btn-out" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener">Aquarismo</a>
       </div>
     </div>
   </div>
 </section>
-
-<div class="band-wrap">
-  <div class="container">
-    <div class="band" data-reveal>
-      <svg class="paw" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="24" cy="40" rx="9" ry="12"/><ellipse cx="42" cy="26" rx="9" ry="12"/><ellipse cx="60" cy="26" rx="9" ry="12"/><ellipse cx="77" cy="40" rx="9" ry="12"/></svg>
-      <div>
-        <h2>Nossa loja virtual está voltando.</h2>
-        <p>Enquanto isso, a gente atende pelo WhatsApp: tire dúvidas, faça seu pedido e escolha entre retirar na loja ou receber em casa.</p>
-      </div>
-      <div class="ctas">
-        <a class="btn btn-dark" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp principal</a>
-        <a class="btn btn-line" href="https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp Aquarismo</a>
-      </div>
-    </div>
-  </div>
-</div>
 </main>
 
 <footer>
   <div class="container">
     <div class="foot">
       <div>
-        <div class="logo-sq"><img src="https://galpaoanimal.com.br/wp-content/uploads/2022/01/Logo-Verde-png.png" alt="Galpão Animal" loading="lazy" onerror="this.parentNode.remove()"></div>
+        <div class="logo-sq"><img src="img/logo.png" alt="Galpão Animal" loading="lazy" width="626" height="328"></div>
         <div class="slogan">Lugar de bicho legal!</div>
-        <p style="margin:10px 0 0;max-width:300px;line-height:1.6">Aquarismo, aves, répteis e exóticos há mais de 30 anos. Totalmente legalizados.</p>
       </div>
       <div>
         <h4>Contato</h4>
@@ -661,7 +636,7 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
         <h4>Loja</h4>
         <ul>
           <li>Rua Baumann, 1363</li>
-          <li>Vila Leopoldina – São Paulo/SP</li>
+          <li>Vila Leopoldina, São Paulo</li>
           <li>Seg a sáb: 10h às 18h</li>
           <li>Dom: 10h às 13h</li>
         </ul>
@@ -669,20 +644,43 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
       <div>
         <h4>Redes</h4>
         <ul>
-          <li><a href="https://www.instagram.com/galpaoanimal/" target="_blank" rel="noopener">Instagram @galpaoanimal</a></li>
-          <li><a href="https://www.tiktok.com/@galpaoanimal" target="_blank" rel="noopener">TikTok @galpaoanimal</a></li>
+          <li><a href="https://www.instagram.com/galpaoanimal/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@galpaoanimal" target="_blank" rel="noopener">TikTok</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Galpão Animal. Todos os direitos reservados.</span>
-      <a class="kodra" href="https://kodratecnologia.com.br" target="_blank" rel="noopener">Prévia desenvolvida por <b>Kodra</b> ↗</a>
+      <span>© 2026 Galpão Animal</span>
+      <a href="https://kodratecnologia.com.br" target="_blank" rel="noopener">Prévia desenvolvida por <b>Kodra</b></a>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<a class="wa-float" href="https://wa.me/5511981360703?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Galp%C3%A3o%20Animal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
+<script>
+/* status aberto/fechado (horário de São Paulo) */
+(function(){
+  try{
+    var el = document.getElementById('status'); if(!el) return;
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var get = function(t){ var p = parts.find(function(x){return x.type===t}); return p ? p.value : ''; };
+    var dow = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var h = parseInt(get('hour'),10) % 24 + parseInt(get('minute'),10)/60;
+    var close = dow === 0 ? 13 : 18, open = 10;
+    var txt, isOpen = h >= open && h < close;
+    if(isOpen) txt = 'Aberto agora · fecha às ' + close + 'h';
+    else if(h < open) txt = 'Fechado agora · abre hoje às 10h';
+    else txt = 'Fechado agora · abre amanhã às 10h';
+    el.querySelector('span').textContent = txt;
+    if(!isOpen) el.classList.add('closed');
+    document.querySelectorAll('.hours [data-days]').forEach(function(s){
+      var d = s.getAttribute('data-days'), m = d.indexOf('-') > 0 ? (dow >= +d.split('-')[0] && dow <= +d.split('-')[1]) : (+d === dow);
+      if(m) s.classList.add('today');
+    });
+  }catch(e){}
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
@@ -693,10 +691,9 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var WA_AQUA = 'https://wa.me/5511972561106?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20setor%20de%20Aquarismo.';
 
-  /* smooth scroll */
   var lenis = null;
   if(!reduce && window.Lenis){
-    lenis = new Lenis({lerp:0.1, smoothWheel:true});
+    lenis = new Lenis({lerp:0.12, smoothWheel:true});
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function(t){ lenis.raf(t*1000); });
     gsap.ticker.lagSmoothing(0);
@@ -706,19 +703,17 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
       var id = a.getAttribute('href'); if(id.length < 2) return;
       var el = document.querySelector(id); if(!el) return;
       e.preventDefault();
-      if(lenis) lenis.scrollTo(el, {offset:-10, duration:1.4});
-      else el.scrollIntoView({behavior:'smooth'});
+      if(lenis) lenis.scrollTo(el, {offset:-80, duration:1.2}); else el.scrollIntoView({behavior:'smooth'});
     });
   });
 
-  /* captions do aquário */
   var STEPS = [
-    {t:0,   n:'01', title:'Substrato fértil',          text:'A base certa para raízes fortes e água equilibrada.'},
-    {t:1.2, n:'02', title:'Rochas e troncos',           text:'O hardscape cria abrigo e território para os peixes.'},
-    {t:2.6, n:'03', title:'Plantas naturais',           text:'Oxigenação, filtragem natural e um visual vivo.'},
-    {t:4.0, n:'04', title:'Água tratada e iluminação',  text:'Parâmetros corretos e luz no ponto para o ecossistema.'},
-    {t:5.6, n:'05', title:'Peixes saudáveis',           text:'De pequenos cardumes a aruanãs e arraias, todos legalizados.'},
-    {t:7.0, n:'✓',  title:'Seu aquário, do jeito certo', text:'Quer um assim? <a href="'+WA_AQUA+'" target="_blank" rel="noopener">Fale com o nosso Aquarismo →</a>'}
+    {t:0,   n:'01', title:'Substrato fértil',            text:'A base certa para raízes fortes e água equilibrada.'},
+    {t:1.2, n:'02', title:'Rochas e troncos',             text:'Criam abrigo e território para os peixes.'},
+    {t:2.6, n:'03', title:'Plantas naturais',             text:'Oxigenação, filtragem natural e um visual vivo.'},
+    {t:4.0, n:'04', title:'Água tratada e iluminação',    text:'Parâmetros corretos e luz no ponto.'},
+    {t:5.6, n:'05', title:'Peixes saudáveis',             text:'De cardumes pequenos a aruanãs e arraias.'},
+    {t:7.0, n:'✓',  title:'Pronto, aquário montado',      text:'Quer um assim? <a href="'+WA_AQUA+'" target="_blank" rel="noopener">Fale com o Aquarismo →</a>'}
   ];
   var capNum = document.querySelector('.aq-num'), capText = document.querySelector('.aq-text');
   var bars = document.querySelectorAll('.aq-bars span');
@@ -754,7 +749,6 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
       .to('#aq-bubbles', {opacity:1, duration:.4}, 5.2)
       .from('#aq-fish .fish', {x:function(i,el){ return +el.getAttribute('data-from'); }, opacity:0, ease:'power2.out', duration:1.4, stagger:.1}, 5.6)
       .to({}, {duration:.9});
-    return tl;
   }
 
   function buildTerra(trigger, end){
@@ -766,44 +760,28 @@ footer{background:var(--ink);color:var(--light-dim);padding:70px 0 28px;font-siz
     tl.fromTo('#terra .lamp-light', {opacity:1}, {opacity:0, duration:.8}, .4)
       .fromTo('#terra .label', {opacity:0, x:-14}, {opacity:1, x:0, duration:.5, stagger:.08}, 2.0)
       .to({}, {duration:.8});
-    return tl;
   }
 
   var mm = gsap.matchMedia();
   mm.add({desk:'(min-width: 901px)', mob:'(max-width: 900px)', reduce:'(prefers-reduced-motion: reduce)'}, function(ctx){
     var c = ctx.conditions;
     if(c.reduce){ renderCaption(5); return; }
-    buildAquarium(c.desk ? '.hero' : '.aqua-stage', c.desk ? '+=2400' : '+=1900');
-    buildTerra(c.desk ? '.terra' : '.terra-stage', c.desk ? '+=1800' : '+=1500');
+    buildAquarium(c.desk ? '.aqua' : '.aqua-stage', c.desk ? '+=2200' : '+=1800');
+    buildTerra(c.desk ? '.terra' : '.terra-stage', c.desk ? '+=1700' : '+=1400');
   });
 
   if(reduce) return;
 
-  /* intro do hero */
-  gsap.from('.hero .reveal-line > span', {yPercent:110, duration:1.1, ease:'power4.out', stagger:.1, delay:.1});
-  gsap.from('.hero [data-fade]', {y:22, opacity:0, duration:.9, ease:'power3.out', stagger:.08, delay:.35});
-  gsap.from('.site-header .bar', {y:-30, opacity:0, duration:.9, ease:'power3.out', delay:.2});
-  var outline = document.querySelector('#aquarium .glass-outline');
-  if(outline && outline.getTotalLength){
-    var len = outline.getTotalLength();
-    gsap.fromTo(outline, {strokeDasharray:len, strokeDashoffset:len}, {strokeDashoffset:0, duration:1.8, ease:'power2.inOut', delay:.2});
-  }
-  gsap.from(['#aq-stand', '#aq-lid', '.aq-caption'], {opacity:0, y:24, duration:1, ease:'power3.out', stagger:.12, delay:.5});
+  gsap.from('[data-in]', {y:18, opacity:0, duration:.8, ease:'power2.out', stagger:.07, delay:.1});
 
-  /* folhas com parallax */
-  gsap.to('.leaf-a', {yPercent:-40, rotation:-8, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'+=2400', scrub:true}});
-  gsap.to('.leaf-b', {yPercent:30, rotation:170, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'+=2400', scrub:true}});
-
-  /* reveals */
   gsap.utils.toArray('[data-reveal]').forEach(function(el){
-    gsap.from(el, {y:44, opacity:0, duration:1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%'}});
+    gsap.from(el, {y:28, opacity:0, duration:.8, ease:'power2.out', scrollTrigger:{trigger:el, start:'top 88%'}});
   });
 
-  /* contadores */
   gsap.utils.toArray('.count').forEach(function(el){
     var to = parseFloat(el.getAttribute('data-to')), dec = +(el.getAttribute('data-dec') || 0), o = {v:0};
     el.textContent = '0';
-    gsap.to(o, {v:to, duration:1.8, ease:'power2.out', scrollTrigger:{trigger:el, start:'top 90%'},
+    gsap.to(o, {v:to, duration:1.6, ease:'power2.out', scrollTrigger:{trigger:el, start:'top 92%'},
       onUpdate:function(){ el.textContent = o.v.toLocaleString('pt-BR', {minimumFractionDigits:dec, maximumFractionDigits:dec}); }});
   });
 
